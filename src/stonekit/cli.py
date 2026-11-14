@@ -122,6 +122,17 @@ def app_command(
     )  # fmt: skip
 
 
+@app.command("workstation")
+def workstation_command(
+    port: int = typer.Option(8600, "--port", help="Local port (the server listens on 127.0.0.1 only)."),
+) -> None:
+    """Open the StoneKit research workstation at http://127.0.0.1:PORT. Research software. Not for clinical use."""
+    from stonekit.workstation.server import serve
+
+    print(f"StoneKit workstation: http://127.0.0.1:{port}  (research software - not for clinical use; Ctrl+C to stop)")
+    serve(port)
+
+
 @data_app.command("status")
 def data_status() -> None:
     """Show which datasets are present, licences recorded and missing items."""

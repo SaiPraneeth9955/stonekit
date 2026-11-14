@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use StoneKit, please cite the accompanying manuscript."
+title: "StoneKit: Detection-Aware Conformal Uncertainty for Automated Kidney-Stone Measurement on Non-Contrast CT"
+type: software
+license: MIT
+repository-code: "https://github.com/SaiPraneeth9955/stonekit"
+date-released: "2026-11-14"
+authors:
+  - family-names: Kadari
+    given-names: Abhijith Reddy
+    email: abhijithreddy2006@gmail.com
+    affiliation: "Department of Computer Science and Engineering, SRM University-AP, Andhra Pradesh, India"
+  - family-names: Surepalli
+    given-names: Sai Praneeth
+    email: praneethh777@gmail.com
+    affiliation: "Department of Computer Science and Engineering, SRM University-AP, Andhra Pradesh, India"
+  - family-names: Kolisetty
+    given-names: Jaswanth
+    email: kolisettyjaswanth8@gmail.com
+    affiliation: "Department of Computer Science and Engineering, SRM University-AP, Andhra Pradesh, India"
+keywords:
+  - kidney stone
+  - computed tomography
+  - conformal prediction
+  - uncertainty quantification
+  - volumetry
+preferred-citation:
+  type: unpublished
+  title: "Detection-Aware Conformal Uncertainty for Automated Kidney-Stone Measurement on Non-Contrast CT"
+  authors:
+    - family-names: Kadari
+      given-names: Abhijith Reddy
+    - family-names: Surepalli
+      given-names: Sai Praneeth
+    - family-names: Kolisetty
+      given-names: Jaswanth
+  year: 2026
+  notes: "Manuscript"
+  url: "https://github.com/SaiPraneeth9955/stonekit"

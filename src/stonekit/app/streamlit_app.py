@@ -97,6 +97,21 @@ UNCERTAINTY_TEXT = ("Not available. The per-stone uncertainty method is still be
                     "can be mistaken for a calibrated one.")
 
 
+RANGES_FILE = "calibrated_ranges.json"  # written by scripts/demo_case.py (stonekit.t1.case_ranges)
+
+
+def load_ranges(folder: Path) -> dict | None:
+    """Calibrated ranges saved next to report.json, or None. An unreadable file is reported, never guessed."""
+    path = folder / RANGES_FILE
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        st.error(f"{RANGES_FILE} could not be read; no ranges are shown.")
+        return None
+
+
 def size_category(d_mm: float) -> str:
     """Research size bins by maximum 3D diameter (not a clinical classification)."""
     return "<5 mm" if d_mm < SIZE_EDGES_MM[0] else "5-<10 mm" if d_mm < SIZE_EDGES_MM[1] else ">=10 mm"
@@ -422,10 +437,13 @@ def main() -> None:
 
     case = report["case_id"] if report else "no study selected"
     created = report.get("created_utc", "") if report else ""
+    ranges = load_ranges(folder) if folder is not None else None
+    tail = ("calibrated ranges are a research demonstration of the frozen locked-study calibration (nominal 90%)." if ranges
+            else "not a validated measurement, and no calibrated uncertainty is reported.")  # fmt: skip
     st.markdown(f"<div class='sk-bar'><span><span class='sk-title'>StoneKit</span><span class='sk-sub'>Kidney stone measurement "
                 f"research workstation</span></span><span class='sk-meta'>{case} · run {created}</span></div>"
                 "<div class='sk-notice'><b>Research use only. Not a diagnostic medical device.</b> Development-stage results: "
-                "not a validated measurement, and no calibrated uncertainty is reported.</div>", unsafe_allow_html=True)  # fmt: skip
+                f"{tail}</div>", unsafe_allow_html=True)  # fmt: skip
     if report is None:
         return
 
@@ -489,7 +507,20 @@ def main() -> None:
         st.markdown(f"### QC status &nbsp;{status_badge(qc_status(report, stones))}", unsafe_allow_html=True)
         flag_list(report.get("case_qc_flags", []))
         st.markdown("### Measurement uncertainty")
-        st.markdown(f"<div class='sk-kv'>{status_badge('NOTE')} {UNCERTAINTY_TEXT}</div>", unsafe_allow_html=True)
+        if ranges and method_name == report.get("primary_method"):
+            b = ranges["burden"]
+            kv([("Total stone burden", f"{b['predicted_mm3']:.0f} mm³"),
+                ("Detection-aware interval (90%)", f"{b['interval_mm3'][0]:.0f} – {b['interval_mm3'][1]:.0f} mm³")])  # fmt: skip
+            if ranges["stones"]:
+                st.dataframe(pd.DataFrame([{"Stone": s["stone_id"], "Volume (mm³)": round(s["volume_mm3"]),
+                                            "Volume range (90%)": f"{s['volume_range_mm3'][0]:.0f} – {s['volume_range_mm3'][1]:.0f}",
+                                            "3D diameter (mm)": round(s["max_diameter_3d_mm"], 1),
+                                            "Diameter range (90%)": f"{s['diameter_range_mm'][0]:.1f} – {s['diameter_range_mm'][1]:.1f}",
+                                            "P(false detection)": round(s["false_detection_probability"], 2)} for s in ranges["stones"]]),
+                             hide_index=True, width="stretch", height=min(38 + 35 * len(ranges["stones"]), 300))  # fmt: skip
+            st.caption(ranges["note"])
+        else:
+            st.markdown(f"<div class='sk-kv'>{status_badge('NOTE')} {UNCERTAINTY_TEXT}</div>", unsafe_allow_html=True)
         if chosen:
             st.markdown(f"### Stone {chosen['stone_id']}")
             kv([("Volume", f"{chosen['volume_mm3']:.1f} mm³ ({chosen['volume_ml']:.3f} mL)"),
