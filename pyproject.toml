@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stonekit"
+version = "0.0.0"
+description = "Research software for kidney stone measurement on non-contrast CT. Not for clinical use."
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = ["pyyaml", "typer", "rich"]
+
+[project.scripts]
+stonekit = "stonekit.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100

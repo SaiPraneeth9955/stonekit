@@ -1,0 +1,29 @@
+{
+  "created": "13 November 2026",
+  "purpose": "Write the T1 freeze manifest: SHA-256 of every artefact the single T1 run depends on (13 November 2026).",
+  "sha256": {
+    "docs/CONFIRMATORY_PROTOCOL_v3_DRAFT.md": "70737f5e0cb31dd83b56cc03f42b322cc4244c4d320892dc1e610f75c5385b57",
+    "configs/system_pipeline_v1.yaml": "64bf721da9d46bc885b331b8a0ecf7a5608c17064c5778d5402cc3a12702b5ee",
+    "configs/baseline_pipeline.yaml": "e522540d0c937fc23218aab0c831722c75618d135703ac64f03c98b604f39c9f",
+    "data/nnunet/nnUNet_results/Dataset501_StoneNCCT/nnUNetTrainer_100epochs__nnUNetPlans_4GB__3d_fullres/fold_0/checkpoint_final.pth": "2100ec09d2e2eadcfd11d928e9db7dbe487a1f1fd10bc17924cfff108a6d410c",
+    "data/nnunet/nnUNet_results/Dataset501_StoneNCCT/nnUNetTrainer_100epochs__nnUNetPlans_4GB__3d_fullres/plans.json": "c1276b1022d7d94b8678fc5d332091c229ea3dde1d7db6a05b3e760e3e72c979",
+    "data/processed/li2022_working_split_v1.csv": "466ec9c86ae905326374d41d45d17f334e97a33e6e1ead993c533968d6c7e8cb",
+    "data/nnunet/li_stone_split.json": "ed5183c78a467438ab2aa0c22e9ee0e3c694b7edbd9492106406b2f0ee97d1b0",
+    "data/nnunet/li_stone_cv_split.json": "63e7c9a754cf1cd924766c425669b445be0303f4ccce4906104fbed4e35603f9",
+    "data/processed/li2022_review_outcome_v1.csv": "0d7bf638b5c38eccded8353d0b89b0f5728e2822140adbb3427e86f81b4feaeb",
+    "data/interim/oof_tables_20261112T082351Z/annotated.csv": "33d28646bd5ac31299cb4b446c7e516ce44ef793311a93a7a3c97eae3d7c1e72",
+    "data/interim/oof_tables_20261112T082351Z/predicted.csv": "45ea95a18c10ffa778efaca9d89c5a7e1feaacfd75f1bea212e15a2f0de996fb",
+    "data/interim/oof_tables_20261112T082351Z/scans.csv": "2e6bc8be990f11233e392b0dd28134d3d06f50602752d9acd1bd132b693051bb",
+    "src/stonekit/uq/confirmatory.py": "2396a9e23c9be15ae0854b666bcdd1fee86b6d464ac53c927679c06f29ba718f",
+    "src/stonekit/uq/conformal.py": "654fb3eec1f374afb76caaeda2686fa97719bfc5066ac403628748fcde11c1ab",
+    "src/stonekit/t1/analysis.py": "90c7ccfb3794a162aadfe903842a92b86cd850800463ff19d4f17a84455eb32e",
+    "src/stonekit/t1/gates.py": "fe4ab0bdd11bb3731f2a811e79f912ffc95728fbe256e8a84c38f945c296a917",
+    "src/stonekit/t1/access.py": "3af7f8a5546dd904c1df78d0d4d2425eb0cff7edd37fc32638b2be641b7a7f6e",
+    "scripts/t1_run.py": "908741b6c8ff537aa8e888316726f5493c103aabb9c8998a0c968262b066af32",
+    "scripts/oof_tta.py": "678fda7f38a4f97d0b1c6842b9ebdad167dfd700a55d78f29f264b845ea920f6",
+    "scripts/build_oof_stone_table.py": "88da03d163e53e5710aeffb48e74d8a62ee5fb20e021d137d9ba2d08ac13f402",
+    "scripts/make_cv_folds.py": "1d37c0adb0092e9f8f90a917a9655b3e5dc344d88b7bad5ccdcc106d63ee4f17",
+    "scripts/leakage_repeat_pairs.py": "22872faae389e627ad83122355ea6799abc471f3c5cc227496f95cc6c5351333",
+    "environment.lock.yml": "fb23c0f263f53e5336a29d03287977b595ef1cabe2757680e57ff8efa7e30ce6"
+  }
+}

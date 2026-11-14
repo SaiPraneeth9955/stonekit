@@ -1,0 +1,143 @@
+{
+  "status": "EXPLORATORY_NOT_PRESPECIFIED",
+  "definitions": "EXPLORATORY comparator (not a final-arm change; U2 stays pre-specified under OD-12): an asymmetric\nMondrian split-conformal interval for per-stone volume and 3D diameter, motivated by the development failure\nanalysis (45 of 46 U2 misses were under-estimates; results/runs/failure_analysis_development_20261112T110426Z).\n\nMethod (established: two-tailed split conformal with a separate quantile for each tail, here per size band):\nwithin each predicted-size band (U2's bands and merge rule), using the signed residual r = log(V / V_hat), the\nupper bound is the finite-sample (1 - alpha/2) conformal quantile of r and the lower bound is minus the\n(1 - alpha/2) conformal quantile of -r. Each tail gets alpha/2, so marginal coverage is >= 1 - alpha.\nDesign: the same cross-conformal-by-fold protocol and table as E6.\nReported against U2: marginal coverage, coverage by band and HU tertile, misses by direction, and median\nrelative width. There is no adoption rule: exploratory only, labelled EXPLORATORY_NOT_PRESPECIFIED.\n",
+  "stones": 465,
+  "results": {
+    "volume_mm3|0.90": {
+      "U2": {
+        "marginal": 0.9010752688172043,
+        "median_rel_width": 1.4413879408418655,
+        "misses_above": 45,
+        "misses_below": 1,
+        "by_band": {
+          "<5": 0.8790322580645161,
+          "5-<10": 0.9083969465648855,
+          ">=10": 0.9095238095238095
+        },
+        "by_hu": {
+          "low": 0.832258064516129,
+          "mid": 0.9225806451612903,
+          "high": 0.9483870967741935
+        }
+      },
+      "U2-asymmetric": {
+        "marginal": 0.9118279569892473,
+        "median_rel_width": 1.3372093023255816,
+        "misses_above": 20,
+        "misses_below": 21,
+        "by_band": {
+          "<5": 0.9193548387096774,
+          "5-<10": 0.9007633587786259,
+          ">=10": 0.9142857142857143
+        },
+        "by_hu": {
+          "low": 0.832258064516129,
+          "mid": 0.9354838709677419,
+          "high": 0.967741935483871
+        }
+      }
+    },
+    "volume_mm3|0.80": {
+      "U2": {
+        "marginal": 0.8021505376344086,
+        "median_rel_width": 1.0414065751144403,
+        "misses_above": 91,
+        "misses_below": 1,
+        "by_band": {
+          "<5": 0.7903225806451613,
+          "5-<10": 0.8091603053435115,
+          ">=10": 0.8047619047619048
+        },
+        "by_hu": {
+          "low": 0.7483870967741936,
+          "mid": 0.8,
+          "high": 0.8580645161290322
+        }
+      },
+      "U2-asymmetric": {
+        "marginal": 0.8043010752688172,
+        "median_rel_width": 0.8631578947368421,
+        "misses_above": 47,
+        "misses_below": 44,
+        "by_band": {
+          "<5": 0.7983870967741935,
+          "5-<10": 0.8091603053435115,
+          ">=10": 0.8047619047619048
+        },
+        "by_hu": {
+          "low": 0.6967741935483871,
+          "mid": 0.8387096774193549,
+          "high": 0.8774193548387097
+        }
+      }
+    },
+    "max_diameter_3d_mm|0.90": {
+      "U2": {
+        "marginal": 0.9032258064516129,
+        "median_rel_width": 0.4910735093728106,
+        "misses_above": 40,
+        "misses_below": 5,
+        "by_band": {
+          "<5": 0.9032258064516129,
+          "5-<10": 0.9007633587786259,
+          ">=10": 0.9047619047619048
+        },
+        "by_hu": {
+          "low": 0.8387096774193549,
+          "mid": 0.9225806451612903,
+          "high": 0.9483870967741935
+        }
+      },
+      "U2-asymmetric": {
+        "marginal": 0.9053763440860215,
+        "median_rel_width": 0.34087406563657385,
+        "misses_above": 25,
+        "misses_below": 19,
+        "by_band": {
+          "<5": 0.9112903225806451,
+          "5-<10": 0.9007633587786259,
+          ">=10": 0.9047619047619048
+        },
+        "by_hu": {
+          "low": 0.8580645161290322,
+          "mid": 0.9096774193548387,
+          "high": 0.9483870967741935
+        }
+      }
+    },
+    "max_diameter_3d_mm|0.80": {
+      "U2": {
+        "marginal": 0.8064516129032258,
+        "median_rel_width": 0.3718473994694045,
+        "misses_above": 84,
+        "misses_below": 6,
+        "by_band": {
+          "<5": 0.8145161290322581,
+          "5-<10": 0.7862595419847328,
+          ">=10": 0.8142857142857143
+        },
+        "by_hu": {
+          "low": 0.7354838709677419,
+          "mid": 0.8193548387096774,
+          "high": 0.864516129032258
+        }
+      },
+      "U2-asymmetric": {
+        "marginal": 0.8193548387096774,
+        "median_rel_width": 0.24259301018467827,
+        "misses_above": 46,
+        "misses_below": 38,
+        "by_band": {
+          "<5": 0.8629032258064516,
+          "5-<10": 0.8015267175572519,
+          ">=10": 0.8047619047619048
+        },
+        "by_hu": {
+          "low": 0.7419354838709677,
+          "mid": 0.8193548387096774,
+          "high": 0.896774193548387
+        }
+      }
+    }
+  }
+}

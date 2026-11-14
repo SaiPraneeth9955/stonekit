@@ -1,0 +1,61 @@
+# Reliability-aware measurement study, fixed by docs/preregistration.md (frozen version 1).
+# Change only as a deviation logged in docs/decisions.md.
+id: r1_reliability_freiburg
+status: frozen_design
+seed: 20261103
+
+preregistration_path: docs/preregistration.md
+preregistration_sha256: 2be7abb1a71108b998ff248772952f2cca24dfdcbd9645a3b38eb55151240fbd
+
+a0_run: results/runs/a0_replicate_freiburg_20261102T133018Z
+a0_stones_sha256: a6ec996771495ae4179f801d09288f7146002e276ab2819ca7d40c32564e2cc4
+raw_folder: data/raw/freiburg
+table: data/processed/freiburg_stones.parquet
+runs_folder: results/runs
+verify_source_checksums: true
+
+# These must equal the a0 run's settings, and the runner checks that they do.
+primary_threshold_hu: 272
+min_component_voxels: 3
+assumed_z_spacing_mm: 0.7
+paper_voxel_edge_mm: 0.7
+
+# Section 7. The documented pre-run grid without 101 HU.
+threshold_grid_hu: [130, 150, 200, 250, 272, 300, 350, 400]
+# Section 12. Exploratory and post-hoc: selected after aggregate results were seen.
+exploratory_local_pairs_hu: [[250, 300], [200, 350]]
+
+# Sections 9 and 10.
+flagged_per_fold: [2, 3, 4, 5, 6]
+primary_repeats: 200
+bootstrap_resamples: 2000
+bootstrap_partitions: 20
+
+# Section 17. A pipeline-integrity diagnostic only.
+integrity_permutations: 100
+integrity_partitions: 20
+
+# Section 13. Secondary.
+range_repeats: 200
+# Implementation choices the preregistration leaves open. Descriptive only.
+range_bootstrap_resamples: 2000
+range_bootstrap_partitions: 5
+exploratory_bootstrap_resamples: 2000
+exploratory_bootstrap_partitions: 5
+
+# Section 12. Exploratory.
+training_threshold_burdens: [0.10, 0.20, 0.30]
+risk_curve_flagged_per_fold: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+# Section 14. Lists are frozen here. The 0.1 mL tier is identified from reference values only.
+expected_stones: 101
+expected_spacing_agree: 80
+coarsest_reference_ml: 0.1
+expected_coarsest: 12
+unreachable_reference_ids: [10, 19, 22, 46, 47, 49, 77, 99]
+flagged_reference_ids: [1, 2, 3, 46, 62]
+float32_ids: [46, 47, 56, 81, 83, 100]
+
+# Section 16. Descriptive labels for the failure tables.
+failure_top_fraction: 0.10
+failure_report_flagged_per_fold: 4

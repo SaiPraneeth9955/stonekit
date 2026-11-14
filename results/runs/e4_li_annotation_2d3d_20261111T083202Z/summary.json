@@ -1,0 +1,129 @@
+{
+  "status": "DEVELOPMENT_OBSERVED",
+  "definitions": "E4 (S3) and E11 (S7) on Li development ANNOTATIONS: 2D vs 3D category disagreement, its drivers, and\nlargest-stone vs total-burden representation. Pre-specified here before the first run (11 November 2026).\n\nReference = Li expert annotation (not physical truth); no model output is used, so all 165 development\nscans are eligible (reserved scans refused by the loader). Pieces: 26-connected, >= 3 voxels (pipeline rule).\n\nS3 (per stone; unit = stone, clustered by scan):\n- definitions: D2 = 2D axial maximum (centre-to-centre), D3 = 3D maximum (centre-to-centre),\n  Deq = volume-equivalent sphere diameter; all from stonekit.measure.\n- categories (research bins): <5, 5-<10, >=10 mm; descriptive split of <5 into <3 and 3-<5.\n- primary estimand: proportion of stones whose D2 category differs from their D3 category, with a\n  scan-cluster bootstrap 95% CI (10,000 resamples, seed 20261105).\n- drivers: GEE logistic (independence working correlation, clusters = scans) of \"category differs\" on\n  elongation, major-axis angle to z (per 10 degrees), slice thickness (mm), log2 volume, mean HU / 100.\n  Reported as odds ratios with robust 95% CIs. Only stones with all covariates.\n- also: relative difference (D3 - D2) / D3, median and IQR by D3 category.\nS7 (per scan with >= 1 stone; unit = scan):\n- Spearman rho between largest-stone D3 and total annotated volume;\n- among scan pairs whose largest-stone D3 differs by < 1 mm, the share whose total volumes differ > 2-fold;\n- share of scans with >= 2 pieces; share of total volume outside the largest piece (median, IQR).\nDescriptive; no outcome claim.\n",
+  "scans": 165,
+  "scans_with_stones": 132,
+  "stones": 741,
+  "S3_category_differs": {
+    "share": 0.11336032388663968,
+    "cluster_ci95": [
+      0.09362276021687299,
+      0.1358939582445253
+    ],
+    "n": 741
+  },
+  "S3_crosstab_d3_rows_d2_cols": {
+    "<5": {
+      "<5": 286,
+      "5-<10": 46,
+      ">=10": 2
+    },
+    "5-<10": {
+      "<5": 0,
+      "5-<10": 138,
+      ">=10": 36
+    },
+    ">=10": {
+      "<5": 0,
+      "5-<10": 0,
+      ">=10": 233
+    }
+  },
+  "S3_rel_diff_by_d3": {
+    "<3": {
+      "n": 155,
+      "median": 0.0,
+      "iqr": [
+        0.0,
+        0.07744736288525034
+      ],
+      "share_differs": 0.0
+    },
+    "3-<5": {
+      "n": 131,
+      "median": 0.10334252525165133,
+      "iqr": [
+        0.0,
+        0.23827463073665678
+      ],
+      "share_differs": 0.0
+    },
+    "5-<10": {
+      "n": 184,
+      "median": 0.11443302368582112,
+      "iqr": [
+        0.040197582960909334,
+        0.19344587426226315
+      ],
+      "share_differs": 0.25
+    },
+    ">=10": {
+      "n": 271,
+      "median": 0.179507363112799,
+      "iqr": [
+        0.0682949770171117,
+        0.32945320777955284
+      ],
+      "share_differs": 0.14022140221402213
+    }
+  },
+  "S3_gee_odds_ratios": {
+    "elongation": {
+      "or": 0.02522312511207369,
+      "ci95": [
+        0.0031071909990857093,
+        0.20475279460017928
+      ],
+      "p": 0.0005723919402136465
+    },
+    "angle10": {
+      "or": 0.7736720151196785,
+      "ci95": [
+        0.7202822139865287,
+        0.8310192523933944
+      ],
+      "p": 2.0119335056207834e-12
+    },
+    "slice_mm": {
+      "or": 0.8186570131758977,
+      "ci95": [
+        0.55907845761345,
+        1.19875716206805
+      ],
+      "p": 0.3038074787647794
+    },
+    "log2v": {
+      "or": 0.9494962454811902,
+      "ci95": [
+        0.8495684655737838,
+        1.0611777116444523
+      ],
+      "p": 0.3610334735199102
+    },
+    "hu100": {
+      "or": 0.9752770053317261,
+      "ci95": [
+        0.8099784838012348,
+        1.174309263951055
+      ],
+      "p": 0.7916273502733902
+    }
+  },
+  "S3_gee_n": {
+    "stones": 741,
+    "scans": 132
+  },
+  "S7": {
+    "scans": 132,
+    "spearman_rho_largest_d3_vs_total_volume": 0.9599679628920353,
+    "p": 1.0334272107508441e-73,
+    "pairs_largest_within_1mm": 298,
+    "share_of_those_total_volume_differs_gt_2x": 0.2550335570469799,
+    "share_scans_multiple_pieces": 0.7803030303030303,
+    "volume_outside_largest_piece_median_iqr": [
+      0.1400694071127358,
+      0.007241428909872449,
+      0.439762344666182
+    ]
+  }
+}

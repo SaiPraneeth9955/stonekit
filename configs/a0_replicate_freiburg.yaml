@@ -1,0 +1,33 @@
+# Experiment a0, fixed by docs/STAGE2_PROTOCOL.md. Change only with the owner's logged approval.
+id: a0_replicate_freiburg
+stage: 2
+status: approved
+seed: 20261102
+
+raw_folder: data/raw/freiburg
+table: data/processed/freiburg_stones.parquet
+runs_folder: results/runs
+verify_source_checksums: true
+
+primary_threshold_hu: 272
+exploratory_thresholds_hu: [101, 130, 150, 200, 250, 272, 300, 350, 400]
+min_component_voxels: 3
+
+# Both spacing assumptions are run. Neither is treated as correct.
+assumed_z_spacing_mm: 0.7
+primary_axis_assignment: Z2
+sensitivity_axis_assignments: [Z1, Z0]
+
+paper_voxel_edge_mm: 0.7
+
+bootstrap_resamples: 2000
+
+g3:
+  icc_above: 0.99
+  borderline_low: 0.985
+  borderline_high: 0.995
+
+sensitivity_exclusions:
+  S1_reference_flagged: [1, 2, 3, 46, 62]
+  S2_largest_outliers: [100, 101]
+  S4_float32_patches: [46, 47, 56, 81, 83, 100]

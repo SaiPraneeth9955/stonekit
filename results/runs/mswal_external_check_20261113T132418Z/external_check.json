@@ -1,0 +1,226 @@
+{
+  "protocol": "v3 \u00a75.4 (secondary, exploratory)",
+  "t1_run": "results/runs/T1_20261113T081425Z",
+  "calibration_quantities_sha256": "58c023ae0e68fb61bff2bc526631981b80dbeb0a8316bac43393ef2517b5cdff",
+  "cases_with_stone_label": 77,
+  "status_counts": {
+    "eligible": 58,
+    "ineligible: contrast": 19
+  },
+  "eligible_scans": 58,
+  "detection": {
+    "detected_share": 0.3778801843317972,
+    "n_annotated": 217,
+    "by_size": {
+      "<3": {
+        "n": 60,
+        "detected": 0.03333333333333333
+      },
+      "3-<5": {
+        "n": 86,
+        "detected": 0.23255813953488372
+      },
+      "5-<10": {
+        "n": 52,
+        "detected": 0.8076923076923077
+      },
+      ">=10": {
+        "n": 19,
+        "detected": 0.9473684210526315
+      }
+    }
+  },
+  "false_positives_per_scan_filtered": 0.7931034482758621,
+  "per_stone": {
+    "volume_mm3|U0": {
+      "marginal": {
+        "n": 75,
+        "scans": 43,
+        "coverage": 0.7066666666666667,
+        "cp95": [
+          0.5902166511126885,
+          0.80619071553584
+        ],
+        "cluster_boot95": [
+          0.6,
+          0.8115942028985508
+        ]
+      },
+      "median_rel_width": 3.7967939855983603
+    },
+    "volume_mm3|U1": {
+      "marginal": {
+        "n": 75,
+        "scans": 43,
+        "coverage": 0.52,
+        "cp95": [
+          0.4015076223153899,
+          0.6368647457209782
+        ],
+        "cluster_boot95": [
+          0.39435552710200605,
+          0.6447368421052632
+        ]
+      },
+      "median_rel_width": 2.666666666666667
+    },
+    "volume_mm3|U2": {
+      "marginal": {
+        "n": 75,
+        "scans": 43,
+        "coverage": 0.7333333333333333,
+        "cp95": [
+          0.6186272795170767,
+          0.8288894608558023
+        ],
+        "cluster_boot95": [
+          0.625,
+          0.8309859154929577
+        ]
+      },
+      "median_rel_width": 6.686991869918699
+    },
+    "volume_mm3|U2-asymmetric": {
+      "marginal": {
+        "n": 75,
+        "scans": 43,
+        "coverage": 0.9866666666666667,
+        "cp95": [
+          0.9279365027568325,
+          0.9996624861976684
+        ],
+        "cluster_boot95": [
+          0.9583333333333334,
+          1.0
+        ]
+      },
+      "median_rel_width": 43.52380952380953
+    },
+    "max_diameter_3d_mm|U0": {
+      "marginal": {
+        "n": 75,
+        "scans": 43,
+        "coverage": 0.6933333333333334,
+        "cp95": [
+          0.5761644670009378,
+          0.7946824116201114
+        ],
+        "cluster_boot95": [
+          0.5833333333333334,
+          0.8
+        ]
+      },
+      "median_rel_width": 1.2731182510503194
+    },
+    "max_diameter_3d_mm|U1": {
+      "marginal": {
+        "n": 75,
+        "scans": 43,
+        "coverage": 0.5866666666666667,
+        "cp95": [
+          0.46702714134037016,
+          0.699246366310952
+        ],
+        "cluster_boot95": [
+          0.47435897435897434,
+          0.7
+        ]
+      },
+      "median_rel_width": 1.1024227315688138
+    },
+    "max_diameter_3d_mm|U2": {
+      "marginal": {
+        "n": 75,
+        "scans": 43,
+        "coverage": 0.8933333333333333,
+        "cp95": [
+          0.8005982557973285,
+          0.9528100482601191
+        ],
+        "cluster_boot95": [
+          0.821917808219178,
+          0.958904109589041
+        ]
+      },
+      "median_rel_width": 3.037128810621329
+    },
+    "max_diameter_3d_mm|U2-asymmetric": {
+      "marginal": {
+        "n": 75,
+        "scans": 43,
+        "coverage": 0.96,
+        "cp95": [
+          0.8875231782399902,
+          0.9916738343338327
+        ],
+        "cluster_boot95": [
+          0.9186046511627907,
+          1.0
+        ]
+      },
+      "median_rel_width": 3.480987264409187
+    }
+  },
+  "burden_0.90": {
+    "width_ratio_A_over_BCQR": {
+      "median": 1.1418799456139443,
+      "ci95": [
+        0.8169312671188178,
+        1.443991952349113
+      ]
+    },
+    "P2-0 naive": {
+      "n": 58,
+      "coverage": 0.4482758620689655,
+      "cp95": [
+        0.31743761123346276,
+        0.58457674548313
+      ],
+      "median_width_mm3": 340.7609179158336,
+      "coverage_stone_free": null
+    },
+    "P2-B direct": {
+      "n": 58,
+      "coverage": 0.896551724137931,
+      "cp95": [
+        0.7883135422012024,
+        0.9610791680776357
+      ],
+      "median_width_mm3": 2946.527415483725,
+      "coverage_stone_free": null
+    },
+    "P2-B-CQR": {
+      "n": 58,
+      "coverage": 0.8793103448275862,
+      "cp95": [
+        0.7670163622916197,
+        0.9500733839762793
+      ],
+      "median_width_mm3": 862.3424015978126,
+      "coverage_stone_free": null
+    },
+    "P2-A decomposition": {
+      "n": 58,
+      "coverage": 0.9655172413793104,
+      "cp95": [
+        0.8809226891196079,
+        0.9957963527601882
+      ],
+      "median_width_mm3": 896.3100357496029,
+      "coverage_stone_free": null
+    },
+    "paired_coverage_difference_A_minus_BCQR": {
+      "estimate": 0.0862068965517242,
+      "ci95": [
+        0.0,
+        0.1724137931034483
+      ]
+    },
+    "formal": {
+      "ratio_ci_excludes_1_below": false,
+      "coverage_check_cp_upper_ge_nominal": true,
+      "P2_success": false
+    },
+    "note": "descriptive only on external data; the OD-1 formal test applies to T1 only"
+  }
+}

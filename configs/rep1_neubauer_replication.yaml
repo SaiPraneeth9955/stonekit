@@ -1,0 +1,39 @@
+# Experiment rep1: complete replication of Neubauer et al. 2023 (docs/FREIBURG_REPLICATION_PROTOCOL.md).
+# The runner refuses to execute unless status is "approved". Change only with the owner's logged approval.
+id: rep1_neubauer_replication
+status: approved
+seed: 20261111
+
+raw_folder: data/raw/freiburg
+runs_folder: results/runs
+
+n_splits: 1000
+n_train: 80
+min_component_voxels: 3
+paper_voxel_edge_mm: 0.7
+
+# Parameter grids (the paper does not state its optimiser; exhaustive grids are our choice).
+m1_threshold_hu: {start: 100, stop: 400, step: 1}
+m3_factor: {start: 0.20, stop: 0.80, step: 0.005}
+pv_factor: {start: 0.0, stop: 1.0, step: 0.01}
+
+# Primary comparison with the paper: P (0.7 mm isotropic, as the paper states), Z2, 6-neighbour surface, 3D diameter.
+primary: {geometry: P_Z2, surface: 6, diameter: 3d}
+geometries:
+  P_Z2: {spacing: P, axis: Z2}
+  A_Z2: {spacing: A, axis: Z2}
+  B_Z2: {spacing: B, axis: Z2}
+  P_Z1: {spacing: P, axis: Z1}
+  P_Z0: {spacing: P, axis: Z0}
+assumed_z_spacing_mm: 0.7
+paper_spacing_mm: 0.7
+
+bootstrap_resamples: 10000
+
+# Table 1 of the paper (mean and SD over 1,000 runs), read 11 November 2026.
+paper_table1:
+  M1: {P1: [272, 5], vol_icc: [0.988, 0.033], vol_diff: [-0.036, 0.049], vol_sd: [0.23, 0.065], diam_icc: [0.994, 0.005], diam_diff: [0.011, 0.158], diam_sd: [0.79, 0.150]}
+  M2: {P1: [194, 17], P2: [0.29, 0.05], vol_icc: [0.990, 0.017], vol_diff: [0.014, 0.055], vol_sd: [0.23, 0.083], diam_icc: [0.995, 0.003], diam_diff: [-0.098, 0.149], diam_sd: [0.69, 0.105]}
+  M3: {P1: [0.48, 0.02], vol_icc: [0.991, 0.011], vol_diff: [-0.020, 0.057], vol_sd: [0.24, 0.094], diam_icc: [0.995, 0.003], diam_diff: [-0.137, 0.145], diam_sd: [0.67, 0.100]}
+  M4: {P1: [0.43, 0.04], P2: [0.11, 0.08], vol_icc: [0.989, 0.023], vol_diff: [0.004, 0.066], vol_sd: [0.26, 0.103], diam_icc: [0.995, 0.004], diam_diff: [-0.137, 0.143], diam_sd: [0.69, 0.100]}
+paper_bartlett_p: {volume: 0.55, diameter: 0.87}

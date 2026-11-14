@@ -1,0 +1,16 @@
+# Hardware timing only, for the local training feasibility check. No scan is read.
+# Inputs are random tensors, used only to measure GPU memory and time. They are not data
+# and never produce a result about stones.
+id: phase_a_train_benchmark
+seed: 20261105
+runs_folder: results/runs
+warmup_iterations: 5
+measured_iterations: 25
+learning_rate: 0.01
+# Plain nnU-Net style 3D U-Net: two convolutions per stage, instance norm, AMP, SGD.
+candidates:
+  - {name: small, patch: [32, 96, 96], batch: 2, base_features: 32, max_features: 320, stages: 5}
+  - {name: medium, patch: [48, 128, 128], batch: 2, base_features: 32, max_features: 320, stages: 5}
+  - {name: nnunet_like_4gb, patch: [56, 160, 160], batch: 2, base_features: 32, max_features: 320, stages: 6}
+  - {name: larger, patch: [64, 192, 192], batch: 2, base_features: 32, max_features: 320, stages: 6}
+  - {name: narrow_large, patch: [64, 192, 192], batch: 2, base_features: 16, max_features: 160, stages: 6}

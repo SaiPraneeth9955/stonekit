@@ -1,0 +1,18 @@
+# Stone baseline training on Li development scans only. Engineering baseline, not final evaluation.
+id: li_stone_baseline
+status: DEVELOPMENT_DEMONSTRATION_NOT_VALIDATED
+seed: 20261105
+
+# Share of training-eligible scans held out as validation, within spacing and volume strata.
+validation_fraction: 0.2
+# Scans with finished review findings go to validation, so a suspicious scan can be shown unseen.
+reviewed_flagged_cases_go_to_validation: true
+
+dataset_id: 501
+dataset_name: Dataset501_StoneNCCT
+gpu_memory_target_gb: 4
+plans: nnUNetPlans_4GB
+configuration: 3d_fullres
+fold: 0
+preprocessing_processes: 3
+augmentation_processes: 6

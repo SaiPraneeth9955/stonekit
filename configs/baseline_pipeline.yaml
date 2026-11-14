@@ -1,0 +1,66 @@
+# Working baseline pipeline (engineering phase, docs/decisions.md). Phases add sections as they
+# are built. These limits are research heuristics, not validated quality rules.
+id: baseline_pipeline
+status: DEVELOPMENT_DEMONSTRATION_NOT_VALIDATED
+
+input_checks:
+  # From the Li 2022 audit: in-plane 0.3711 to 0.9766 mm, slices 0.42 to 2.5 mm.
+  in_plane_mm: [0.35, 1.0]
+  slice_mm: [0.4, 2.6]
+  min_slices: 20
+  max_axis_dot: 0.001
+  max_tilt_degrees: 1.0
+  spacing_agreement_mm: 0.001
+  air_hu_at_most: -500
+  bone_hu_at_least: 300
+  # 55 audited scans reach 3071 HU, so reaching it is not itself a warning.
+  saturation_hu: 3071
+  max_saturated_fraction: 0.001
+  # Fill values seen in the audit. Reported only, because the threshold and measurements ignore them.
+  padding_values_hu: [-3024, -1024]
+
+kidney_segmentation:
+  # Engineering safety limit, not a method setting. Longest successful TotalSegmentator run on 164
+  # development scans: 112.9 s (median 40 s). On timeout the tool and its helpers are stopped and the
+  # case is reported as failed.
+  timeout_seconds: 600
+
+roi:
+  # Margin around both kidneys. Smallest tested margin keeping every stone label whole on the 164
+  # development scans measured (745 of 745 pieces); 20 and 30 mm cut one scan (docs/results.md).
+  box_margin_mm: 40
+
+threshold_baseline:
+  # Locked comparator, not a trained model: the frozen a0 value and separation rules, never tuned here.
+  threshold_hu: 272
+  # Only voxels this close to a kidney count, because the ROI box also holds spine and bowel.
+  # 95th percentile of the farthest stone label from the kidney was 28.8 mm, rounded up. 125 of 131
+  # scans keep all labels; this comparator is not expected to find stones farther away.
+  kidney_distance_mm: 30
+
+measurement:
+  min_component_voxels: 3
+
+model:
+  dataset_id: 501
+  dataset_name: Dataset501_StoneNCCT
+  configuration: 3d_fullres
+  plans: nnUNetPlans_4GB
+  trainer: nnUNetTrainer_100epochs
+  fold: 0
+  checkpoint: checkpoint_final.pth
+  disable_tta: false
+
+qc:
+  # Research heuristics, not validated rules and not calibrated uncertainty.
+  very_small_voxels: 10
+  very_small_mm3: 10
+  unusually_large_ml: 20
+  outside_kidney_mm: 5
+  long_thin_min_diameter_mm: 20
+  long_thin_max_sphere_fraction: 0.03
+  metal_like_hu: 2500
+  merged_min_voxels: 100
+  merged_max_hull_fill: 0.5
+  many_stones: 10
+  contrast_aorta_median_hu: 100

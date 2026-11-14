@@ -1,0 +1,209 @@
+type,n,median,ci_low,ci_high,panel,stone,caliper_mm,error_mm,panel_b
+brushite,17.0,0.6335374999999994,0.34570333333333314,1.025414999999999,a: volume error by type,,,,
+calciumoxalate-dihydrate,6.0,0.5569722777777775,0.1904832424984692,1.695558278688524,a: volume error by type,,,,
+cystine,23.0,0.23560000000000014,0.15864117647058837,0.3997500000000001,a: volume error by type,,,,
+other,5.0,0.2343883999999996,0.021887794117646978,0.40201249999999955,a: volume error by type,,,,
+not recorded,42.0,0.16765669607843148,0.0958749298642533,0.3588946534090894,a: volume error by type,,,,
+uric acid,8.0,0.09901323518379603,0.038163010526315974,0.16534249999999973,a: volume error by type,,,,
+,,,,,3D maximum diameter,1.0,5.71,-0.928333673608293,3D maximum diameter
+,,,,,3D maximum diameter,2.0,6.526666666666666,0.8141164196869264,3D maximum diameter
+,,,,,3D maximum diameter,3.0,5.263333333333334,-0.08114636713033896,3D maximum diameter
+,,,,,3D maximum diameter,4.0,7.083333333333333,0.22045345910628633,3D maximum diameter
+,,,,,3D maximum diameter,5.0,6.983333333333333,0.13227263960483882,3D maximum diameter
+,,,,,3D maximum diameter,6.0,6.81,-0.33765212413527657,3D maximum diameter
+,,,,,3D maximum diameter,7.0,6.186666666666667,0.534961020263168,3D maximum diameter
+,,,,,3D maximum diameter,8.0,6.923333333333333,0.15397017206767494,3D maximum diameter
+,,,,,3D maximum diameter,9.0,6.296666666666667,-0.08486115485840173,3D maximum diameter
+,,,,,3D maximum diameter,10.0,6.05,0.026802023508023964,3D maximum diameter
+,,,,,3D maximum diameter,11.0,6.359999999999999,0.6787695966961893,3D maximum diameter
+,,,,,3D maximum diameter,12.0,6.453333333333333,0.9242410765852869,3D maximum diameter
+,,,,,3D maximum diameter,13.0,6.420000000000001,-0.4351158953104779,3D maximum diameter
+,,,,,3D maximum diameter,14.0,7.603333333333334,0.13157960145128644,3D maximum diameter
+,,,,,3D maximum diameter,15.0,6.336666666666666,0.05016021657850267,3D maximum diameter
+,,,,,3D maximum diameter,16.0,6.326666666666667,0.8648662801803217,3D maximum diameter
+,,,,,3D maximum diameter,17.0,6.656666666666666,0.6841164196869265,3D maximum diameter
+,,,,,3D maximum diameter,18.0,7.583333333333333,-0.09658153295047445,3D maximum diameter
+,,,,,3D maximum diameter,19.0,5.6499999999999995,0.33488410468952345,3D maximum diameter
+,,,,,3D maximum diameter,20.0,9.023333333333333,-0.4658528211080579,3D maximum diameter
+,,,,,3D maximum diameter,21.0,6.776666666666666,0.30063683873434055,3D maximum diameter
+,,,,,3D maximum diameter,22.0,5.753333333333334,0.09059512651133517,3D maximum diameter
+,,,,,3D maximum diameter,23.0,6.046666666666667,0.6749610202631686,3D maximum diameter
+,,,,,3D maximum diameter,24.0,6.976666666666667,-0.09443406023717671,3D maximum diameter
+,,,,,3D maximum diameter,25.0,7.349999999999999,-0.5075249288255153,3D maximum diameter
+,,,,,3D maximum diameter,26.0,11.523333333333332,0.2667523290950644,3D maximum diameter
+,,,,,3D maximum diameter,27.0,8.293333333333333,0.6298047537961775,3D maximum diameter
+,,,,,3D maximum diameter,28.0,11.886666666666665,-1.2624538515361898,3D maximum diameter
+,,,,,3D maximum diameter,29.0,10.476666666666667,-0.5430324958756305,3D maximum diameter
+,,,,,3D maximum diameter,30.0,12.473333333333334,0.3510223196488038,3D maximum diameter
+,,,,,3D maximum diameter,31.0,8.233333333333334,0.3241471788919412,3D maximum diameter
+,,,,,3D maximum diameter,32.0,12.593333333333334,-0.05525916563190414,3D maximum diameter
+,,,,,3D maximum diameter,33.0,7.95,-0.28508794025366413,3D maximum diameter
+,,,,,3D maximum diameter,34.0,7.32,0.02078308635359427,3D maximum diameter
+,,,,,3D maximum diameter,35.0,7.1066666666666665,0.9015478895707156,3D maximum diameter
+,,,,,3D maximum diameter,36.0,8.066666666666666,0.3333333333333339,3D maximum diameter
+,,,,,3D maximum diameter,37.0,11.46,-0.640217393639329,3D maximum diameter
+,,,,,3D maximum diameter,38.0,9.35,-0.3379605390734639,3D maximum diameter
+,,,,,3D maximum diameter,39.0,8.186666666666667,-0.14500472947560716,3D maximum diameter
+,,,,,3D maximum diameter,40.0,8.316666666666665,-0.04500898819229171,3D maximum diameter
+,,,,,3D maximum diameter,41.0,13.853333333333333,-1.0289776803511952,3D maximum diameter
+,,,,,3D maximum diameter,42.0,9.193333333333333,-1.0522312644190794,3D maximum diameter
+,,,,,3D maximum diameter,43.0,9.126666666666667,0.26010488552692834,3D maximum diameter
+,,,,,3D maximum diameter,44.0,13.566666666666665,0.2851392929724863,3D maximum diameter
+,,,,,3D maximum diameter,45.0,7.273333333333333,0.17722219936173111,3D maximum diameter
+,,,,,3D maximum diameter,46.0,5.966666666666666,0.4201602165785072,3D maximum diameter
+,,,,,3D maximum diameter,47.0,6.733333333333333,0.4581996135136608,3D maximum diameter
+,,,,,3D maximum diameter,48.0,8.883333333333333,0.0991783630061267,3D maximum diameter
+,,,,,3D maximum diameter,49.0,8.316666666666668,0.1150860453644107,3D maximum diameter
+,,,,,3D maximum diameter,50.0,13.456666666666669,0.16966305216689825,3D maximum diameter
+,,,,,3D maximum diameter,51.0,8.43,1.068863562983573,3D maximum diameter
+,,,,,3D maximum diameter,52.0,12.583333333333334,0.1599220405263413,3D maximum diameter
+,,,,,3D maximum diameter,53.0,11.193333333333333,0.39611109693949764,3D maximum diameter
+,,,,,3D maximum diameter,54.0,12.143333333333336,0.8416168090156315,3D maximum diameter
+,,,,,3D maximum diameter,55.0,11.286666666666667,0.28025562071534615,3D maximum diameter
+,,,,,3D maximum diameter,56.0,12.556666666666667,-0.4830129001763215,3D maximum diameter
+,,,,,3D maximum diameter,57.0,13.31,0.4295552071380069,3D maximum diameter
+,,,,,3D maximum diameter,58.0,8.166666666666666,0.7564714204628427,3D maximum diameter
+,,,,,3D maximum diameter,59.0,10.839999999999998,-0.39012820597111286,3D maximum diameter
+,,,,,3D maximum diameter,60.0,11.756666666666666,0.5515200995772283,3D maximum diameter
+,,,,,3D maximum diameter,61.0,12.423333333333332,0.5216656458417965,3D maximum diameter
+,,,,,3D maximum diameter,62.0,17.44666666666667,-0.34514234726269777,3D maximum diameter
+,,,,,3D maximum diameter,63.0,9.026666666666666,0.8803958399094647,3D maximum diameter
+,,,,,3D maximum diameter,64.0,13.166666666666666,0.4026767509284941,3D maximum diameter
+,,,,,3D maximum diameter,65.0,10.813333333333333,-0.36346153930444736,3D maximum diameter
+,,,,,3D maximum diameter,66.0,14.24,0.3369593211193056,3D maximum diameter
+,,,,,3D maximum diameter,67.0,17.666666666666668,0.8936244843756356,3D maximum diameter
+,,,,,3D maximum diameter,68.0,13.58,-0.5751229181271373,3D maximum diameter
+,,,,,3D maximum diameter,69.0,12.313333333333333,0.7906982693352109,3D maximum diameter
+,,,,,3D maximum diameter,70.0,12.290000000000001,0.5141315260534043,3D maximum diameter
+,,,,,3D maximum diameter,71.0,12.803333333333335,0.35981233700205806,3D maximum diameter
+,,,,,3D maximum diameter,72.0,15.496666666666668,1.1042767015740953,3D maximum diameter
+,,,,,3D maximum diameter,73.0,13.456666666666665,-0.05981666361472904,3D maximum diameter
+,,,,,3D maximum diameter,74.0,12.323333333333332,0.6815437485395233,3D maximum diameter
+,,,,,3D maximum diameter,75.0,14.530000000000001,0.13495614028199832,3D maximum diameter
+,,,,,3D maximum diameter,76.0,16.283333333333335,-0.1515479537993194,3D maximum diameter
+,,,,,3D maximum diameter,77.0,13.606666666666667,-0.8430851089368065,3D maximum diameter
+,,,,,3D maximum diameter,78.0,20.210000000000004,0.7537607565821709,3D maximum diameter
+,,,,,3D maximum diameter,79.0,15.673333333333332,0.12136772366014448,3D maximum diameter
+,,,,,3D maximum diameter,80.0,18.796666666666667,0.08986681280653741,3D maximum diameter
+,,,,,3D maximum diameter,81.0,15.166666666666666,0.9651187128673566,3D maximum diameter
+,,,,,3D maximum diameter,82.0,17.126666666666665,0.22686148805177808,3D maximum diameter
+,,,,,3D maximum diameter,83.0,18.166666666666668,1.536754078030846,3D maximum diameter
+,,,,,3D maximum diameter,84.0,16.423333333333332,0.022777297549456677,3D maximum diameter
+,,,,,3D maximum diameter,85.0,23.13,-0.41614072907706046,3D maximum diameter
+,,,,,3D maximum diameter,86.0,21.236666666666668,0.5448418182591617,3D maximum diameter
+,,,,,3D maximum diameter,87.0,22.72666666666667,-0.6107847095769827,3D maximum diameter
+,,,,,3D maximum diameter,88.0,25.36,-0.6244014012548504,3D maximum diameter
+,,,,,3D maximum diameter,89.0,21.55666666666667,-0.20963298141299802,3D maximum diameter
+,,,,,3D maximum diameter,90.0,19.87333333333333,0.1623849103730528,3D maximum diameter
+,,,,,3D maximum diameter,91.0,22.583333333333332,0.5821958169003629,3D maximum diameter
+,,,,,3D maximum diameter,92.0,20.656666666666666,0.5474792555608623,3D maximum diameter
+,,,,,3D maximum diameter,93.0,28.013333333333332,0.7391175399860934,3D maximum diameter
+,,,,,3D maximum diameter,94.0,27.876666666666665,0.48883531685063986,3D maximum diameter
+,,,,,3D maximum diameter,95.0,27.94333333333333,-0.26834491813656314,3D maximum diameter
+,,,,,3D maximum diameter,96.0,32.083333333333336,0.32597129480381426,3D maximum diameter
+,,,,,3D maximum diameter,97.0,31.3,1.1170301257857354,3D maximum diameter
+,,,,,3D maximum diameter,98.0,30.98333333333333,1.169965380792032,3D maximum diameter
+,,,,,3D maximum diameter,99.0,29.78333333333333,0.9514798007615752,3D maximum diameter
+,,,,,3D maximum diameter,100.0,46.03333333333333,0.14512310485287117,3D maximum diameter
+,,,,,3D maximum diameter,101.0,46.580000000000005,0.032743329058426696,3D maximum diameter
+,,,,,2D axial maximum diameter,1.0,5.71,-2.7964056378821365,2D axial maximum diameter
+,,,,,2D axial maximum diameter,2.0,6.526666666666666,0.43432367033274133,2D axial maximum diameter
+,,,,,2D axial maximum diameter,3.0,5.263333333333334,-0.9940196738183849,2D axial maximum diameter
+,,,,,2D axial maximum diameter,4.0,7.083333333333333,-1.2872564108369717,2D axial maximum diameter
+,,,,,2D axial maximum diameter,5.0,6.983333333333333,-0.9522921592285991,2D axial maximum diameter
+,,,,,2D axial maximum diameter,6.0,6.81,-1.4142572472504407,2D axial maximum diameter
+,,,,,2D axial maximum diameter,7.0,6.186666666666667,-0.7909239139171111,2D axial maximum diameter
+,,,,,2D axial maximum diameter,8.0,6.923333333333333,-0.5797529095243501,2D axial maximum diameter
+,,,,,2D axial maximum diameter,9.0,6.296666666666667,-0.5005897441703056,2D axial maximum diameter
+,,,,,2D axial maximum diameter,10.0,6.05,-1.2683336736082902,2D axial maximum diameter
+,,,,,2D axial maximum diameter,11.0,6.359999999999999,-0.5639230775036381,2D axial maximum diameter
+,,,,,2D axial maximum diameter,12.0,6.453333333333333,-0.6572564108369718,2D axial maximum diameter
+,,,,,2D axial maximum diameter,13.0,6.420000000000001,-0.6239230775036395,2D axial maximum diameter
+,,,,,2D axial maximum diameter,14.0,7.603333333333334,-1.8555615476837515,2D axial maximum diameter
+,,,,,2D axial maximum diameter,15.0,6.336666666666666,-0.5405897441703047,2D axial maximum diameter
+,,,,,2D axial maximum diameter,16.0,6.326666666666667,0.8270144534383501,2D axial maximum diameter
+,,,,,2D axial maximum diameter,17.0,6.656666666666666,-0.31308624285767994,2D axial maximum diameter
+,,,,,2D axial maximum diameter,18.0,7.583333333333333,-1.7872564108369708,2D axial maximum diameter
+,,,,,2D axial maximum diameter,19.0,5.6499999999999995,-0.5228112757642727,2D axial maximum diameter
+,,,,,2D axial maximum diameter,20.0,9.023333333333333,-1.4291328720760603,2D axial maximum diameter
+,,,,,2D axial maximum diameter,21.0,6.776666666666666,-1.5944797004636744,2D axial maximum diameter
+,,,,,2D axial maximum diameter,22.0,5.753333333333334,-0.3575905805837776,2D axial maximum diameter
+,,,,,2D axial maximum diameter,23.0,6.046666666666667,-0.29889488101708395,2D axial maximum diameter
+,,,,,2D axial maximum diameter,24.0,6.976666666666667,-1.3269191983608355,2D axial maximum diameter
+,,,,,2D axial maximum diameter,25.0,7.349999999999999,-0.6691973782777279,2D axial maximum diameter
+,,,,,2D axial maximum diameter,26.0,11.523333333333332,-1.3023039772185268,2D axial maximum diameter
+,,,,,2D axial maximum diameter,27.0,8.293333333333333,-1.3323429963339235,2D axial maximum diameter
+,,,,,2D axial maximum diameter,28.0,11.886666666666665,-1.287171730055002,2D axial maximum diameter
+,,,,,2D axial maximum diameter,29.0,10.476666666666667,-0.5696041600905399,2D axial maximum diameter
+,,,,,2D axial maximum diameter,30.0,12.473333333333334,-1.0653923547884911,2D axial maximum diameter
+,,,,,2D axial maximum diameter,31.0,8.233333333333334,-1.0796522132283162,2D axial maximum diameter
+,,,,,2D axial maximum diameter,32.0,12.593333333333334,-1.2312509851238644,2D axial maximum diameter
+,,,,,2D axial maximum diameter,33.0,7.95,-0.6092169136464074,2D axial maximum diameter
+,,,,,2D axial maximum diameter,34.0,7.32,-0.6391973782777312,2D axial maximum diameter
+,,,,,2D axial maximum diameter,35.0,7.1066666666666665,0.5229797889614973,2D axial maximum diameter
+,,,,,2D axial maximum diameter,36.0,8.066666666666666,0.20499101180771184,2D axial maximum diameter
+,,,,,2D axial maximum diameter,37.0,11.46,-0.7375252557065526,2D axial maximum diameter
+,,,,,2D axial maximum diameter,38.0,9.35,-0.456710062496267,2D axial maximum diameter
+,,,,,2D axial maximum diameter,39.0,8.186666666666667,-1.4650389797368293,2D axial maximum diameter
+,,,,,2D axial maximum diameter,40.0,8.316666666666665,-0.07743593667836457,2D axial maximum diameter
+,,,,,2D axial maximum diameter,41.0,13.853333333333333,-6.11842039854871,2D axial maximum diameter
+,,,,,2D axial maximum diameter,42.0,9.193333333333333,-1.354706014303435,2D axial maximum diameter
+,,,,,2D axial maximum diameter,43.0,9.126666666666667,-0.6004287454174051,2D axial maximum diameter
+,,,,,2D axial maximum diameter,44.0,13.566666666666665,-1.5795058190487001,2D axial maximum diameter
+,,,,,2D axial maximum diameter,45.0,7.273333333333333,-1.2422921592285991,2D axial maximum diameter
+,,,,,2D axial maximum diameter,46.0,5.966666666666666,-0.570923913917107,2D axial maximum diameter
+,,,,,2D axial maximum diameter,47.0,6.733333333333333,0.42034778677168916,2D axial maximum diameter
+,,,,,2D axial maximum diameter,48.0,8.883333333333333,-0.3570954120840746,2D axial maximum diameter
+,,,,,2D axial maximum diameter,49.0,8.316666666666668,-1.1629855465616492,2D axial maximum diameter
+,,,,,2D axial maximum diameter,50.0,13.456666666666669,-3.365181161167552,2D axial maximum diameter
+,,,,,2D axial maximum diameter,51.0,8.43,0.09623792124926034,2D axial maximum diameter
+,,,,,2D axial maximum diameter,52.0,12.583333333333334,-0.5961724857153641,2D axial maximum diameter
+,,,,,2D axial maximum diameter,53.0,11.193333333333333,-0.4708585890398904,2D axial maximum diameter
+,,,,,2D axial maximum diameter,54.0,12.143333333333336,-1.2511794883406129,2D axial maximum diameter
+,,,,,2D axial maximum diameter,55.0,11.286666666666667,-0.3945128216739455,2D axial maximum diameter
+,,,,,2D axial maximum diameter,56.0,12.556666666666667,-1.1487256881218233,2D axial maximum diameter
+,,,,,2D axial maximum diameter,57.0,13.31,-4.416710062496268,2D axial maximum diameter
+,,,,,2D axial maximum diameter,58.0,8.166666666666666,0.6966659861167521,2D axial maximum diameter
+,,,,,2D axial maximum diameter,59.0,10.839999999999998,-2.3137620787507345,2D axial maximum diameter
+,,,,,2D axial maximum diameter,60.0,11.756666666666666,-3.230428745417404,2D axial maximum diameter
+,,,,,2D axial maximum diameter,61.0,12.423333333333332,-3.0648115195362458,2D axial maximum diameter
+,,,,,2D axial maximum diameter,62.0,17.44666666666667,-1.782375838164306,2D axial maximum diameter
+,,,,,2D axial maximum diameter,63.0,9.026666666666666,-0.13337672916293286,2D axial maximum diameter
+,,,,,2D axial maximum diameter,64.0,13.166666666666666,-2.060418543543717,2D axial maximum diameter
+,,,,,2D axial maximum diameter,65.0,10.813333333333333,-0.5923039772185223,2D axial maximum diameter
+,,,,,2D axial maximum diameter,66.0,14.24,-2.8779176517905327,2D axial maximum diameter
+,,,,,2D axial maximum diameter,67.0,17.666666666666668,-7.839783299382962,2D axial maximum diameter
+,,,,,2D axial maximum diameter,68.0,13.58,-0.6550255623989116,2D axial maximum diameter
+,,,,,2D axial maximum diameter,69.0,12.313333333333333,-2.092303977218524,2D axial maximum diameter
+,,,,,2D axial maximum diameter,70.0,12.290000000000001,-1.4944564287008362,2D axial maximum diameter
+,,,,,2D axial maximum diameter,71.0,12.803333333333335,-2.5823039772185243,2D axial maximum diameter
+,,,,,2D axial maximum diameter,72.0,15.496666666666668,-4.701123095367501,2D axial maximum diameter
+,,,,,2D axial maximum diameter,73.0,13.456666666666665,-0.5316922290655803,2D axial maximum diameter
+,,,,,2D axial maximum diameter,74.0,12.323333333333332,-0.9153923547884855,2D axial maximum diameter
+,,,,,2D axial maximum diameter,75.0,14.530000000000001,-2.5211539050175436,2D axial maximum diameter
+,,,,,2D axial maximum diameter,76.0,16.283333333333335,-0.29510256584425143,2D axial maximum diameter
+,,,,,2D axial maximum diameter,77.0,13.606666666666667,-4.248144852869583,2D axial maximum diameter
+,,,,,2D axial maximum diameter,78.0,20.210000000000004,-4.014839465174948,2D axial maximum diameter
+,,,,,2D axial maximum diameter,79.0,15.673333333333332,-1.654925020025022,2D axial maximum diameter
+,,,,,2D axial maximum diameter,80.0,18.796666666666667,-1.2675252744268377,2D axial maximum diameter
+,,,,,2D axial maximum diameter,81.0,15.166666666666666,0.821564100822421,2D axial maximum diameter
+,,,,,2D axial maximum diameter,82.0,17.126666666666665,-0.9631612426044995,2D axial maximum diameter
+,,,,,2D axial maximum diameter,83.0,18.166666666666668,0.7871000679007416,2D axial maximum diameter
+,,,,,2D axial maximum diameter,84.0,16.423333333333332,-0.644871873356724,2D axial maximum diameter
+,,,,,2D axial maximum diameter,85.0,23.13,-3.0689566396849415,2D axial maximum diameter
+,,,,,2D axial maximum diameter,86.0,21.236666666666668,-5.184468127043754,2D axial maximum diameter
+,,,,,2D axial maximum diameter,87.0,22.72666666666667,-1.9817171780797764,2D axial maximum diameter
+,,,,,2D axial maximum diameter,88.0,25.36,-5.70821908104676,2D axial maximum diameter
+,,,,,2D axial maximum diameter,89.0,21.55666666666667,-0.25715210927964804,2D axial maximum diameter
+,,,,,2D axial maximum diameter,90.0,19.87333333333333,-1.176389148277913,2D axial maximum diameter
+,,,,,2D axial maximum diameter,91.0,22.583333333333332,-0.7785945289794611,2D axial maximum diameter
+,,,,,2D axial maximum diameter,92.0,20.656666666666666,-1.542541653514398,2D axial maximum diameter
+,,,,,2D axial maximum diameter,93.0,28.013333333333332,-3.014156392539636,2D axial maximum diameter
+,,,,,2D axial maximum diameter,94.0,27.876666666666665,-4.246991570843786,2D axial maximum diameter
+,,,,,2D axial maximum diameter,95.0,27.94333333333333,-1.9559847178695193,2D axial maximum diameter
+,,,,,2D axial maximum diameter,96.0,32.083333333333336,-7.4191934572601745,2D axial maximum diameter
+,,,,,2D axial maximum diameter,97.0,31.3,-5.119615387518191,2D axial maximum diameter
+,,,,,2D axial maximum diameter,98.0,30.98333333333333,-3.8681861635748476,2D axial maximum diameter
+,,,,,2D axial maximum diameter,99.0,29.78333333333333,-2.4741244010858345,2D axial maximum diameter
+,,,,,2D axial maximum diameter,100.0,46.03333333333333,-9.846716137550928,2D axial maximum diameter
+,,,,,2D axial maximum diameter,101.0,46.580000000000005,-9.151673057434273,2D axial maximum diameter

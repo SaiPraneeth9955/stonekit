@@ -1,0 +1,24 @@
+{
+  "status": "DEVELOPMENT_ABLATION",
+  "definitions": "N-C ablation (owner decision OD-13; ablation only, never a novelty claim): is P2-A's false-positive component\nmore than a distance-to-kidney rule? DEVELOPMENT out-of-fold data only.\n\nThe same 200 seeded 35 / 53 / 77 development splits as the T1 dry run (scripts/t1_dry_run_development.py; same seed).\nIn each split, P2-A runs with the full false-positive features (frozen arm) and with distance to the kidney only.\nPre-specified reading (docs/NOVELTY_CANDIDATES_20261112.md, fixed before the run): if the distance-only P2-A's\nmedian width and coverage are within +/-5% of full P2-A, the simpler model is a candidate simplification, which\nneeds an owner decision before the freeze. Otherwise it is reported as an ablation. Label DEVELOPMENT_ABLATION.\n",
+  "reps": 200,
+  "full": {
+    "coverage_median": 0.9245283018867925,
+    "width_median": 2209.569738945894
+  },
+  "distance_only": {
+    "coverage_median": 0.9245283018867925,
+    "width_median": 2798.4318295102216
+  },
+  "relative_width_change": {
+    "median": 0.11065315306931156,
+    "p05": -0.1396696713660852,
+    "p95": 2.6657764165891065
+  },
+  "coverage_difference": {
+    "median": 0.0,
+    "p05": -0.037735849056603765,
+    "p95": 0.037735849056603765
+  },
+  "within_5pct": false
+}

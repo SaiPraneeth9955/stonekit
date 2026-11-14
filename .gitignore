@@ -1,0 +1,47 @@
+# Data: nothing under the top-level data/ folder is committed, except these two files.
+# The leading slash matters: a plain "data/" would also ignore src/stonekit/data/.
+/data/*
+!/data/registry.yaml
+!/data/README.md
+
+# Restricted data, wherever it ends up
+**/restricted/
+
+# Results and imaging
+/results/raw/
+*.nii
+*.nii.gz
+*.nrrd
+*.mha
+*.dcm
+
+# Li-derived per-case pipeline outputs (CT previews in report.html, stone/kidney meshes, TTA arrays):
+# kept on disk, never committed
+/results/runs/*/cal_work/
+/results/runs/*/test_work/
+/results/runs/*/cases/
+*.obj
+*.stl
+*.ply
+*.vtk
+*.npz
+*.npy
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+
+# Python and tool caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# LaTeX build output (compiled locally; not committed)
+/paper/build/
+
+# Public release tree assembled by scripts/build_public_release.py (never committed here)
+/public_release/

@@ -1,0 +1,153 @@
+{
+  "status": "DEVELOPMENT_OBSERVED",
+  "definitions": "E7 (S4): detection uncertainty on development out-of-fold data (master plan v2). Detection is kept\nseparate from measurement: a missed stone is never counted as a measurement error.\n\nReference = Li annotation (not physical truth). Unit = annotated piece / predicted piece, clustered by scan.\n1. Detection: share of annotated pieces in a group with >= 1 predicted piece (any group kind except\n   'missed'), by annotated 3D diameter bin (<3, 3-<5, 5-<10, >=10 mm) and HU tertile, with scan-cluster\n   bootstrap 95% CIs; GEE logistic (independence) of detected on log2 volume and mean HU / 100.\n2. False positives: predicted pieces in 'false_positive' groups per scan, unfiltered and with the 30 mm\n   kidney-distance filter; also on stone-free scans.\n3. Per-piece false-positive probability: logistic regression of is_FP on log volume, p_mean, TTA spread,\n   threshold sensitivity, distance to kidney, mean HU / 100, cross-fitted by fold (each fold scored by a\n   model fitted on the other folds). Discrimination (AUROC), Brier score, and a 5-bin reliability table.\n   With a single fold (debug), 5 seeded scan groups are used and the output is labelled DEBUG.\n",
+  "scans": 165,
+  "annotated_pieces": 741,
+  "predicted_pieces": 729,
+  "detection_overall": {
+    "n": 741,
+    "scans": 132,
+    "share": 0.659919028340081,
+    "cluster_ci95": [
+      0.5896366369384847,
+      0.7378067257945307
+    ]
+  },
+  "detection_by_size_bin": {
+    "<3": {
+      "n": 155,
+      "scans": 61,
+      "share": 0.18064516129032257,
+      "cluster_ci95": [
+        0.10465116279069768,
+        0.2831858407079646
+      ]
+    },
+    "3-<5": {
+      "n": 131,
+      "scans": 59,
+      "share": 0.5190839694656488,
+      "cluster_ci95": [
+        0.4087575372897493,
+        0.6500101626016259
+      ]
+    },
+    "5-<10": {
+      "n": 184,
+      "scans": 80,
+      "share": 0.7608695652173914,
+      "cluster_ci95": [
+        0.6600940348218025,
+        0.8662790697674418
+      ]
+    },
+    ">=10": {
+      "n": 271,
+      "scans": 103,
+      "share": 0.933579335793358,
+      "cluster_ci95": [
+        0.8885132192296826,
+        0.9762845849802372
+      ]
+    }
+  },
+  "detection_by_hu_tertile": {
+    "low": {
+      "n": 247,
+      "scans": 74,
+      "share": 0.25101214574898784,
+      "cluster_ci95": [
+        0.1794871794871795,
+        0.34286129568106305
+      ]
+    },
+    "mid": {
+      "n": 247,
+      "scans": 86,
+      "share": 0.728744939271255,
+      "cluster_ci95": [
+        0.6535707255343082,
+        0.8089456428483882
+      ]
+    },
+    "high": {
+      "n": 247,
+      "scans": 103,
+      "share": 1.0,
+      "cluster_ci95": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "detection_gee_odds_ratios": {
+    "log2v": {
+      "or": 1.3973806433148384,
+      "ci95": [
+        1.1043764136922276,
+        1.7681223884370016
+      ]
+    },
+    "hu100": {
+      "or": 4.099097216188873,
+      "ci95": [
+        2.7320925840907937,
+        6.150083670520653
+      ]
+    }
+  },
+  "d50_at_median_hu": {
+    "volume_mm3": 6.344673506633284,
+    "sphere_equivalent_diameter_mm": 2.2968724858178695,
+    "median_hu": 268.8805847167969
+  },
+  "false_positives_per_scan": {
+    "unfiltered_mean": 1.309090909090909,
+    "filtered_30mm_mean": 0.7757575757575758,
+    "stone_free_scans": 33,
+    "stone_free_with_any_fp_unfiltered": 19,
+    "stone_free_with_any_fp_filtered": 12
+  },
+  "fp_probability_model": {
+    "pieces": 729,
+    "fp_share": 0.2962962962962963,
+    "auroc": 0.9383889249873655,
+    "brier": 0.06544099734963628,
+    "brier_of_constant_rate": 0.2085048010973937,
+    "reliability": {
+      "(-0.001, 0.2]": {
+        "n": 505,
+        "observed": 0.053465346534653464,
+        "predicted": 0.06939499606555696
+      },
+      "(0.2, 0.4]": {
+        "n": 30,
+        "observed": 0.36666666666666664,
+        "predicted": 0.28509452901986637
+      },
+      "(0.4, 0.6]": {
+        "n": 22,
+        "observed": 0.6818181818181818,
+        "predicted": 0.5016129904212704
+      },
+      "(0.6, 0.8]": {
+        "n": 26,
+        "observed": 0.9230769230769231,
+        "predicted": 0.7102206461644732
+      },
+      "(0.8, 1.0]": {
+        "n": 146,
+        "observed": 0.952054794520548,
+        "predicted": 0.9736286623223327
+      }
+    }
+  },
+  "fp_single_feature_auroc": {
+    "log_volume": 0.42269511226626244,
+    "p_mean": 0.7664112699444083,
+    "tta_spread": 0.7913643419247707,
+    "threshold_sensitivity": 0.7236706735975742,
+    "distance_to_kidney_mm": 0.9444805429210887,
+    "hu100": 0.37564977257959714
+  }
+}

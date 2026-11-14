@@ -1,0 +1,9 @@
+# Schema of data/registry.yaml. Every entry under "datasets" has these fields.
+fields:
+  id: Dataset ID, D1 to D6
+  name: Dataset name and source publication
+  access_mode: How the dataset is obtained
+  role: What the dataset is used for
+  source_url: Where the dataset is obtained
+  licence: Licence text, or "VERIFY" until the owner has confirmed it
+  status: One of "missing" or "present"

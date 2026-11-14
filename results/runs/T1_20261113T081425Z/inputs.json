@@ -1,0 +1,200 @@
+{
+  "mode": "T1",
+  "commit": "f3e8b359ceff9a934490bc4e9ef6979b5c5f78dc",
+  "protocol_sha256": "70737f5e0cb31dd83b56cc03f42b322cc4244c4d320892dc1e610f75c5385b57",
+  "fit_table": "data/interim/oof_tables_20261112T082351Z",
+  "gates": [
+    {
+      "name": "protocol_frozen",
+      "passed": true,
+      "detail": "logged 70737f5e0cb3\u2026, file 70737f5e0cb3\u2026"
+    },
+    {
+      "name": "git_clean_at_frozen_commit",
+      "passed": true,
+      "detail": "head f3e8b359ceff, expected f3e8b359ceff, uncommitted paths 0"
+    },
+    {
+      "name": "owner_unlock",
+      "passed": true,
+      "detail": "matches frozen protocol and commit"
+    },
+    {
+      "name": "split_unchanged",
+      "passed": true,
+      "detail": "expected 466ec9c86ae9\u2026, got 466ec9c86ae9\u2026"
+    },
+    {
+      "name": "single_run",
+      "passed": true,
+      "detail": "no completed T1 run and no attempt that reached the test scans"
+    },
+    {
+      "name": "config_frozen",
+      "passed": true,
+      "detail": "expected 64bf721da9d4\u2026, got 64bf721da9d4\u2026"
+    },
+    {
+      "name": "checkpoint_frozen",
+      "passed": true,
+      "detail": "expected 2100ec09d2e2\u2026, got 2100ec09d2e2\u2026"
+    },
+    {
+      "name": "screening_outcome_frozen",
+      "passed": true,
+      "detail": "expected 0d7bf638b5c3\u2026, got 0d7bf638b5c3\u2026"
+    }
+  ],
+  "calibration": [
+    "wd0003",
+    "wd0015",
+    "wd0016",
+    "wd0034",
+    "wd0040",
+    "wd0043",
+    "wd0045",
+    "wd0049",
+    "wd0055",
+    "wd0080",
+    "wd0082",
+    "wd0083",
+    "wd0085",
+    "wd0092",
+    "wd0102",
+    "wd0105",
+    "wd0106",
+    "wd0116",
+    "wd0118",
+    "wd0126",
+    "wd0132",
+    "wd0138",
+    "wd0141",
+    "wd0152",
+    "wd0159",
+    "wd0163",
+    "wd0166",
+    "wd0169",
+    "wd0170",
+    "wd0233",
+    "wd0234",
+    "wd0236",
+    "wd0243",
+    "wd0246",
+    "wd0258"
+  ],
+  "test": [
+    "wd0005",
+    "wd0009",
+    "wd0010",
+    "wd0013",
+    "wd0017",
+    "wd0021",
+    "wd0024",
+    "wd0029",
+    "wd0039",
+    "wd0057",
+    "wd0070",
+    "wd0071",
+    "wd0074",
+    "wd0078",
+    "wd0084",
+    "wd0091",
+    "wd0103",
+    "wd0104",
+    "wd0111",
+    "wd0123",
+    "wd0125",
+    "wd0135",
+    "wd0140",
+    "wd0143",
+    "wd0146",
+    "wd0147",
+    "wd0148",
+    "wd0155",
+    "wd0157",
+    "wd0164",
+    "wd0165",
+    "wd0171",
+    "wd0173",
+    "wd0175",
+    "wd0176",
+    "wd0184",
+    "wd0193",
+    "wd0194",
+    "wd0196",
+    "wd0205",
+    "wd0207",
+    "wd0211",
+    "wd0217",
+    "wd0221",
+    "wd0222",
+    "wd0229",
+    "wd0230",
+    "wd0240",
+    "wd0241",
+    "wd0242",
+    "wd0244",
+    "wd0248",
+    "wd0253"
+  ],
+  "sensitivity": {
+    "S1_screening_exclusions": {
+      "scans": [
+        "wd0024",
+        "wd0061",
+        "wd0066",
+        "wd0068",
+        "wd0075",
+        "wd0095",
+        "wd0113",
+        "wd0131",
+        "wd0164",
+        "wd0239",
+        "wd0241"
+      ],
+      "reserved_only": false
+    },
+    "S2_all_screened_flags": {
+      "scans": [
+        "wd0009",
+        "wd0013",
+        "wd0024",
+        "wd0045",
+        "wd0061",
+        "wd0066",
+        "wd0068",
+        "wd0075",
+        "wd0095",
+        "wd0113",
+        "wd0131",
+        "wd0144",
+        "wd0164",
+        "wd0173",
+        "wd0215",
+        "wd0235",
+        "wd0239",
+        "wd0241",
+        "wd0253"
+      ],
+      "reserved_only": false
+    },
+    "S3_cross_split_repeat_pairs": {
+      "scans": [
+        "wd0039",
+        "wd0040",
+        "wd0070",
+        "wd0071",
+        "wd0074",
+        "wd0102",
+        "wd0105",
+        "wd0147",
+        "wd0152",
+        "wd0175",
+        "wd0236",
+        "wd0243"
+      ],
+      "reserved_only": true
+    }
+  },
+  "item5": "no qualified radiology-trained reader; D-REV not performed (owner decision OD-19)"
+}

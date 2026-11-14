@@ -1,0 +1,188 @@
+{
+  "status": "DEVELOPMENT_FAILURE_ANALYSIS",
+  "definitions": "Failure analysis of the FINAL-arm intervals on DEVELOPMENT out-of-fold data (numbers only; no images; no\ncalibration or test data). Characterises which stones the per-stone U2 interval misses, and which patients the\nP2-A burden interval misses, so that failure modes can be reported and flagged, not hidden.\n\nPer-stone (U2 volume, nominal 0.90; coverage indicators from the saved E6 per-stone file): the miss rate by\npredicted-size band, HU tertile, native slice group, elongation tertile and fold. Misses are split into\nunder-estimates (reference > upper bound: the stone is bigger than the interval allows) and over-estimates\n(reference < lower bound), and summarised by the size of the log error relative to the interval half-width.\nPatient burden (P2-A, nominal 0.90): recomputed with the same cross-fitted procedure as E8 is NOT done here\n(no rerun). Instead the E8 scan-level drivers are summarised for all scans: missed-burden share, false-positive\nvolume share and stone-free status, from the out-of-fold table, as context for the burden failure modes.\nLabel DEVELOPMENT_FAILURE_ANALYSIS.\n",
+  "stones": 465,
+  "misses": 46,
+  "per_stone_U2_volume_0.90": {
+    "band": {
+      "<5": {
+        "miss_rate": 0.12096774193548387,
+        "misses": 15,
+        "n": 124,
+        "cp95": [
+          0.06931106882393215,
+          0.19165950031200873
+        ]
+      },
+      "5-<10": {
+        "miss_rate": 0.0916030534351145,
+        "misses": 12,
+        "n": 131,
+        "cp95": [
+          0.04823260629220569,
+          0.15454525591786358
+        ]
+      },
+      ">=10": {
+        "miss_rate": 0.09047619047619047,
+        "misses": 19,
+        "n": 210,
+        "cp95": [
+          0.055353882257739774,
+          0.13768291233048469
+        ]
+      }
+    },
+    "hu_tertile": {
+      "low": {
+        "miss_rate": 0.16774193548387098,
+        "misses": 26,
+        "n": 155,
+        "cp95": [
+          0.11259737337414279,
+          0.2360403980662348
+        ]
+      },
+      "mid": {
+        "miss_rate": 0.07741935483870968,
+        "misses": 12,
+        "n": 155,
+        "cp95": [
+          0.04064276141079313,
+          0.13133062686734862
+        ]
+      },
+      "high": {
+        "miss_rate": 0.05161290322580645,
+        "misses": 8,
+        "n": 155,
+        "cp95": [
+          0.02254319868804181,
+          0.09916333834441646
+        ]
+      }
+    },
+    "slice_group": {
+      "<=1 mm": {
+        "miss_rate": 0.2,
+        "misses": 3,
+        "n": 15,
+        "cp95": [
+          0.04331200510583602,
+          0.48089113380685317
+        ]
+      },
+      "1-2 mm": {
+        "miss_rate": 0.11428571428571428,
+        "misses": 32,
+        "n": 280,
+        "cp95": [
+          0.07949817332121205,
+          0.1574945999330778
+        ]
+      },
+      ">2 mm": {
+        "miss_rate": 0.06470588235294118,
+        "misses": 11,
+        "n": 170,
+        "cp95": [
+          0.03274070258864866,
+          0.11282581642633564
+        ]
+      }
+    },
+    "elongation_tertile": {
+      "low": {
+        "miss_rate": 0.14838709677419354,
+        "misses": 23,
+        "n": 155,
+        "cp95": [
+          0.09644963797272375,
+          0.2142888453127305
+        ]
+      },
+      "mid": {
+        "miss_rate": 0.07741935483870968,
+        "misses": 12,
+        "n": 155,
+        "cp95": [
+          0.04064276141079313,
+          0.13133062686734862
+        ]
+      },
+      "high": {
+        "miss_rate": 0.07096774193548387,
+        "misses": 11,
+        "n": 155,
+        "cp95": [
+          0.03595721334288661,
+          0.12343179556318169
+        ]
+      }
+    },
+    "fold": {
+      "0": {
+        "miss_rate": 0.10909090909090909,
+        "misses": 12,
+        "n": 110,
+        "cp95": [
+          0.05765472558063294,
+          0.18280728105385585
+        ]
+      },
+      "1": {
+        "miss_rate": 0.0547945205479452,
+        "misses": 4,
+        "n": 73,
+        "cp95": [
+          0.015129523838188282,
+          0.13439383435477686
+        ]
+      },
+      "2": {
+        "miss_rate": 0.07,
+        "misses": 7,
+        "n": 100,
+        "cp95": [
+          0.028605288907418584,
+          0.13891972845586648
+        ]
+      },
+      "3": {
+        "miss_rate": 0.15625,
+        "misses": 15,
+        "n": 96,
+        "cp95": [
+          0.09017248286138804,
+          0.24458411530151916
+        ]
+      },
+      "4": {
+        "miss_rate": 0.09302325581395349,
+        "misses": 8,
+        "n": 86,
+        "cp95": [
+          0.04102185927379909,
+          0.17508921402985353
+        ]
+      }
+    }
+  },
+  "miss_direction": {
+    "under_estimate_ref_above_interval": 45,
+    "over_estimate_ref_below_interval": 1
+  },
+  "miss_log_error_abs": {
+    "median": 0.976364105550547,
+    "max": 2.618438042412523
+  },
+  "burden_drivers": {
+    "scans": 165,
+    "stone_free": 33,
+    "stone_free_with_fp_volume_after_filter": 12,
+    "missed_share_of_burden_median": 0.0,
+    "missed_share_of_burden_p90": 0.17498158014055779,
+    "fp_share_of_predicted_median": 0.0,
+    "total_missed_over_total_burden": 0.01889085871396656
+  }
+}

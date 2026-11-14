@@ -1,0 +1,20 @@
+{
+  "definitions": "Pre-specified power simulation that fixes the P1 non-inferiority margin delta (amendment 6, 11 Nov 2026).\n\nP1 primary: marginal per-stone coverage on the locked test (53 scans; 50 only if D-REV is approved); success if the scan-cluster bootstrap\n95% lower bound >= nominal - delta. delta = the smallest value in {0.05, 0.075, 0.10} giving >= 80% power\nwhen the true coverage equals nominal.\n\nSimulation (development data only; no calibration or test data):\n- the cluster structure (matched stones per scan, and the within-scan correlation of coverage) is taken\n  from the development OOF coverage indicators of the method selected by E6;\n- to impose \"true coverage = nominal\", each simulated test set resamples TEST_SCANS development scans with\n  replacement and keeps their within-scan covered/not-covered pattern, after the scans are reweighted so\n  the expected stone-level coverage equals nominal exactly (exponential tilting of scan weights by their\n  coverage share; the tilt is solved numerically);\n- each simulated set gets the same scan-cluster percentile bootstrap (2,000 resamples) as the real test.\nReported: power for each delta, the chosen delta, and the expected number of matched test stones.\n",
+  "source": "data/interim/e6_per_stone_e6_uncertainty_design_20261112T082354Z.csv",
+  "column": "covered|volume_mm3|0.90|U2",
+  "nominal": 0.9,
+  "development_scans": 122,
+  "development_matched_stones": 465,
+  "development_coverage": 0.9010752688172043,
+  "tilt": -0.03029396238853781,
+  "test_scans": 53,
+  "expected_test_matched_stones": 202.1030113302476,
+  "power_by_delta": {
+    "0.05": 0.466,
+    "0.075": 0.633,
+    "0.1": 0.781
+  },
+  "chosen_delta": null,
+  "note": "chosen_delta None means even 0.10 gives < 80% power; P1 is then reported as underpowered.",
+  "status": "PRE_FREEZE_DESIGN"
+}

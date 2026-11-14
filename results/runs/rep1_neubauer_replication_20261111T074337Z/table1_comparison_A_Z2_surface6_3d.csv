@@ -1,0 +1,31 @@
+method,quantity,paper_mean,paper_sd,ours_mean,ours_sd,abs_gap,verdict
+M1,P1,272.0,5.0,263.256,9.1858,8.744,reproduced
+M1,vol_icc,0.988,0.033,0.988,0.0235,0.0,reproduced
+M1,vol_diff,-0.036,0.049,0.0302,0.0639,0.0058,reproduced
+M1,vol_sd,0.23,0.065,0.2813,0.1151,0.0513,reproduced
+M1,diam_icc,0.994,0.005,0.9953,0.0029,0.0013,reproduced
+M1,diam_diff,0.011,0.158,0.211,0.1471,0.2,close
+M1,diam_sd,0.79,0.15,0.6663,0.1327,0.1237,reproduced
+M2,P1,194.0,17.0,244.72,16.191,50.72,not reproduced
+M2,P2,0.29,0.05,0.1128,0.084,0.1772,not reproduced
+M2,vol_icc,0.99,0.017,0.9881,0.023,0.0019,reproduced
+M2,vol_diff,0.014,0.055,0.0181,0.0675,0.0041,reproduced
+M2,vol_sd,0.23,0.083,0.2839,0.1115,0.0539,reproduced
+M2,diam_icc,0.995,0.003,0.9952,0.003,0.0002,reproduced
+M2,diam_diff,-0.098,0.149,0.2794,0.1637,0.1814,close
+M2,diam_sd,0.69,0.105,0.6476,0.1346,0.0424,reproduced
+M3,P1,0.48,0.02,0.5846,0.0151,0.1046,not reproduced
+M3,vol_icc,0.991,0.011,0.9903,0.0158,0.0007,reproduced
+M3,vol_diff,-0.02,0.057,-0.0431,0.0588,0.0231,reproduced
+M3,vol_sd,0.24,0.094,0.2668,0.117,0.0268,reproduced
+M3,diam_icc,0.995,0.003,0.9973,0.002,0.0023,close
+M3,diam_diff,-0.137,0.145,0.1268,0.1083,0.0102,reproduced
+M3,diam_sd,0.67,0.1,0.504,0.1051,0.166,close
+M4,P1,0.43,0.04,0.5846,0.0151,0.1546,not reproduced
+M4,P2,0.11,0.08,0.0,0.0,0.11,not reproduced
+M4,vol_icc,0.989,0.023,0.9903,0.0158,0.0013,reproduced
+M4,vol_diff,0.004,0.066,-0.0431,0.0588,0.0391,reproduced
+M4,vol_sd,0.26,0.103,0.2668,0.117,0.0068,reproduced
+M4,diam_icc,0.995,0.004,0.9973,0.002,0.0023,close
+M4,diam_diff,-0.137,0.143,0.1268,0.1083,0.0102,reproduced
+M4,diam_sd,0.69,0.1,0.504,0.1051,0.186,close

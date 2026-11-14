@@ -1,0 +1,28 @@
+# All paths in one place, relative to the project root.
+
+# Dataset folders that `stonekit data status` may check for files.
+# D5 and D6 (MIMIC) are deliberately not listed here: their status comes only from
+# data/registry.yaml, so the status command never touches data/restricted/.
+raw_datasets:
+  D1: data/raw/freiburg
+  D2: data/raw/mswal
+  D3: data/raw/ctorg
+  D4: data/raw/li2022
+
+interim: data/interim
+processed: data/processed
+
+# Exported as environment variables by the CLI and notebook (Section 7).
+nnunet:
+  nnUNet_raw: data/nnunet/nnUNet_raw
+  nnUNet_preprocessed: data/nnunet/nnUNet_preprocessed
+  nnUNet_results: data/nnunet/nnUNet_results
+
+results:
+  runs: results/runs
+  tables: results/tables
+  figures: results/figures
+  records: results/records
+
+# Owner-only. Used by Part B code that the owner runs. Claude Code never reads it.
+restricted: data/restricted

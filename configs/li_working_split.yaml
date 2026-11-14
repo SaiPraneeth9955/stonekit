@@ -1,0 +1,20 @@
+# DEVELOPMENT-ONLY working split for the engineering phase (docs/decisions.md, 5 November 2026).
+# NOT the final scientific split. Set before the script first ran. One draw, never redrawn.
+id: li_working_split
+status: DEVELOPMENT_ONLY_NOT_FINAL
+seed: 20261105
+
+cases_table: data/interim/li2022_full_audit/li_full_cases.csv
+review_sheet: data/interim/li2022_full_audit/review/li_slicer_review_sheet.csv
+manifest: data/processed/li2022_working_split_v1.csv
+
+# Approved fractions and strata (docs/decisions.md). Largest remainder in each stratum,
+# with ties going to the earlier group in this list.
+fractions:
+  development: 0.65
+  reserved_calibration: 0.15
+  reserved_test: 0.20
+
+# wd0097 and wd0232 are not in the cases table, because their masks do not fit their images.
+excluded: [wd0097, wd0218, wd0232, wd0182, wd0188, wd0062, wd0192]
+expected_cohort_size: 253

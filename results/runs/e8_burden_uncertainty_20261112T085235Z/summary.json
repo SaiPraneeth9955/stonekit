@@ -1,0 +1,193 @@
+{
+  "status": "DEVELOPMENT_DESIGN_NOT_VALIDATION",
+  "definitions": "E8 (P2 design): patient-level burden uncertainty on development out-of-fold data (master plan v2 \u00a7G,\namended 11 November 2026). Target B = total annotated stone volume per scan (0 for stone-free scans);\nB_hat = total predicted volume after the deployed 30 mm kidney-distance filter. Reference = annotation.\n\nMethods (cross-fitted by fold; with a single fold, 5 seeded scan groups and the output is DEBUG):\n- P2-0 naive: sum over predicted pieces of per-stone Mondrian bounds V_hat*exp(-/+q_s) (q_s from other folds'\n  one_to_one |log ratio| in the piece's predicted-size stratum). No false-positive or missed-stone term.\n- P2-B direct: split conformal on r = |log((B + c)/(B_hat + c))|, c = 5 mm3 (fixed in the plan).\n- P2-A decomposition: an explicit distributional model, NOT sampling from conformal intervals.\n  Per draw: each predicted piece is kept with probability 1 - pi (pi = cross-fitted false-positive\n  probability, same features as E7) and gets volume V_hat*exp(e), e drawn from other folds' one_to_one\n  log ratios log(V_ref/V_hat) in its predicted-size stratum; a missed-burden value is drawn from other\n  folds' per-scan missed burden (sum of annotated volume in 'missed' groups) within the same slice group\n  (<=1 mm / >1 mm; all scans if fewer than 10). 2,000 draws -> central (1-alpha) raw interval, then\n  conformalised at patient level by one log-scale factor t (cross-conformal).\n- P2-A-nomissed: the same without the missed-burden term (ablation).\n- P2-B-CQR (added 11 November 2026 so the direct comparator is not a strawman): conformalised quantile\n  regression of log(B + c) on log(B_hat + c), log(1 + sum of (1 - pi) * V_hat) and slice mm, fitted on\n  half of the other folds' scans and conformalised on the other half (CQR score), cross-fitted by fold.\nMetrics: patient coverage with Clopper-Pearson CI; median width (mm3); paired width ratio A/B\n(median, bootstrap CI over scans); coverage for stone-free scans and burden tertiles.\n",
+  "scans": 165,
+  "stone_free_scans": 33,
+  "c_mm3": 5.0,
+  "results": {
+    "0.90": {
+      "P2-0 naive": {
+        "coverage": 0.7818181818181819,
+        "cp95": [
+          0.7109655772955706,
+          0.8422650031831869
+        ],
+        "n": 165,
+        "median_width_mm3": 1150.7716464269222,
+        "coverage_stone_free": 0.6363636363636364,
+        "coverage_by_burden_tertile": {
+          "low": 0.6,
+          "mid": 0.8181818181818182,
+          "high": 0.9272727272727272
+        }
+      },
+      "P2-B direct": {
+        "coverage": 0.9030303030303031,
+        "cp95": [
+          0.8473054144231025,
+          0.9435516062932501
+        ],
+        "n": 165,
+        "median_width_mm3": 12105.562259451426,
+        "coverage_stone_free": 0.6666666666666666,
+        "coverage_by_burden_tertile": {
+          "low": 0.7272727272727273,
+          "mid": 0.9818181818181818,
+          "high": 1.0
+        }
+      },
+      "P2-B-CQR": {
+        "coverage": 0.9272727272727272,
+        "cp95": [
+          0.8764066088762112,
+          0.9618579160142823
+        ],
+        "n": 165,
+        "median_width_mm3": 8701.889091158375,
+        "coverage_stone_free": 0.7878787878787878,
+        "coverage_by_burden_tertile": {
+          "low": 0.8363636363636363,
+          "mid": 1.0,
+          "high": 0.9454545454545454
+        }
+      },
+      "P2-A decomposition": {
+        "coverage": 0.9151515151515152,
+        "cp95": [
+          0.8617363756792121,
+          0.9528351311937471
+        ],
+        "n": 165,
+        "median_width_mm3": 1530.3169449020284,
+        "coverage_stone_free": 0.9090909090909091,
+        "coverage_by_burden_tertile": {
+          "low": 0.9090909090909091,
+          "mid": 0.9090909090909091,
+          "high": 0.9272727272727272
+        }
+      },
+      "P2-A without missed term": {
+        "coverage": 0.8787878787878788,
+        "cp95": [
+          0.8190201652683721,
+          0.9243648346812388
+        ],
+        "n": 165,
+        "median_width_mm3": 2002.418099413755,
+        "coverage_stone_free": 0.9696969696969697,
+        "coverage_by_burden_tertile": {
+          "low": 0.8545454545454545,
+          "mid": 0.8727272727272727,
+          "high": 0.9090909090909091
+        }
+      },
+      "paired_width_ratio_A_over_B": {
+        "median": 0.14598146364968803,
+        "ci95": [
+          0.12588078763050142,
+          0.1787705243978861
+        ]
+      },
+      "paired_width_ratio_A_over_BCQR": {
+        "median": 0.2339792216657204,
+        "ci95": [
+          0.19229879430532923,
+          0.29546284185707844
+        ],
+        "bootstrap": "scan-level paired, 10000 resamples, seed 20261105, same indices as A/B"
+      }
+    },
+    "0.80": {
+      "P2-0 naive": {
+        "coverage": 0.7636363636363637,
+        "cp95": [
+          0.6913510733633378,
+          0.8262023600938999
+        ],
+        "n": 165,
+        "median_width_mm3": 851.7085545237145,
+        "coverage_stone_free": 0.6363636363636364,
+        "coverage_by_burden_tertile": {
+          "low": 0.5818181818181818,
+          "mid": 0.8,
+          "high": 0.9090909090909091
+        }
+      },
+      "P2-B direct": {
+        "coverage": 0.7878787878787878,
+        "cp95": [
+          0.7175414638957507,
+          0.8475804575384369
+        ],
+        "n": 165,
+        "median_width_mm3": 1877.1250065640957,
+        "coverage_stone_free": 0.6363636363636364,
+        "coverage_by_burden_tertile": {
+          "low": 0.6181818181818182,
+          "mid": 0.8181818181818182,
+          "high": 0.9272727272727272
+        }
+      },
+      "P2-B-CQR": {
+        "coverage": 0.8303030303030303,
+        "cp95": [
+          0.764165444023545,
+          0.8841766799861989
+        ],
+        "n": 165,
+        "median_width_mm3": 1759.7760997748567,
+        "coverage_stone_free": 0.7272727272727273,
+        "coverage_by_burden_tertile": {
+          "low": 0.6727272727272727,
+          "mid": 0.9272727272727272,
+          "high": 0.8909090909090909
+        }
+      },
+      "P2-A decomposition": {
+        "coverage": 0.8363636363636363,
+        "cp95": [
+          0.7709201966580275,
+          0.8893070564303117
+        ],
+        "n": 165,
+        "median_width_mm3": 889.5039032529413,
+        "coverage_stone_free": 0.9090909090909091,
+        "coverage_by_burden_tertile": {
+          "low": 0.8727272727272727,
+          "mid": 0.7818181818181819,
+          "high": 0.8545454545454545
+        }
+      },
+      "P2-A without missed term": {
+        "coverage": 0.8121212121212121,
+        "cp95": [
+          0.7440494265330241,
+          0.8686315506974053
+        ],
+        "n": 165,
+        "median_width_mm3": 863.8772140550027,
+        "coverage_stone_free": 0.9090909090909091,
+        "coverage_by_burden_tertile": {
+          "low": 0.7818181818181819,
+          "mid": 0.7818181818181819,
+          "high": 0.8727272727272727
+        }
+      },
+      "paired_width_ratio_A_over_B": {
+        "median": 0.5341965445370789,
+        "ci95": [
+          0.4400944534121637,
+          0.7008627214692309
+        ]
+      },
+      "paired_width_ratio_A_over_BCQR": {
+        "median": 0.5004082900095495,
+        "ci95": [
+          0.4472020688608967,
+          0.6508580680121296
+        ],
+        "bootstrap": "scan-level paired, 10000 resamples, seed 20261105, same indices as A/B"
+      }
+    }
+  }
+}

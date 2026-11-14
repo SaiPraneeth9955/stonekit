@@ -1,0 +1,49 @@
+{
+ "released_cases": 484,
+ "cases_with_kidney_stone_label": 77,
+ "stone_components_total": 300,
+ "components_by_sphere_eq_diameter": {
+  "<3": 89,
+  "3-<5": 113,
+  "5-<10": 77,
+  ">=10": 21
+ },
+ "stone_case_slice_thickness_mm": {
+  "min": 0.699999988079071,
+  "median": 1.25,
+  "max": 1.5
+ },
+ "dataset_json_keys": [
+  "channel_names",
+  "description",
+  "file_ending",
+  "labels",
+  "licence",
+  "name",
+  "numTest",
+  "numTraining",
+  "relase",
+  "tensorImageSize",
+  "test",
+  "training"
+ ],
+ "dataset_json_phase_related": {
+  "channel_names": {
+   "0": "CT"
+  }
+ },
+ "dataset_json_labels": {
+  "background": 0,
+  "gallstone": 1,
+  "kidney stone": 2,
+  "liver tumor": 3,
+  "kidney tumor": 4,
+  "pancreatic cancer": 5,
+  "liver cyst": 6,
+  "kidney cyst": 7
+ },
+ "dataset_json_licence_fields": {
+  "licence": "CC BY-NC 4.0"
+ },
+ "per_case_phase_available": false
+}

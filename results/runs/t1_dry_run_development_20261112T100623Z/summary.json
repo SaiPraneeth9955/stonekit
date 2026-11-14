@@ -1,0 +1,331 @@
+{
+  "status": "DEVELOPMENT_DRY_RUN_NOT_A_RESULT",
+  "definitions": "T1 dry run on DEVELOPMENT out-of-fold data only (no calibration or test scan is touched).\n\nPurpose (engineering validation + expected operating characteristics, not a result):\n- run the frozen-arm T1 analysis engine (src/stonekit/uq/confirmatory.py) end to end on real development tables;\n- estimate how the single locked T1 would behave at its real sizes: in each of R seeded repetitions the\n  165 development scans are randomly split into a pseudo-calibration set (35 scans), a pseudo-test set\n  (53 scans) and a fit set (the remaining 77 scans, standing in for the development data that fit the\n  P2-A components at T1, where 165 scans will be available: so this dry run is conservative);\n- the secondary filter-on vs filter-off ablation (owner decision OD-3) is evaluated the same way.\n\nReported per arm: per-stone coverage at nominal 0.90 (baseline U0/U1; final U2 volume, U4 diameter) and\nthe P2 formal test of OD-1 (P2-A / P2-B-CQR width-ratio CI excluding 1 AND P2-A CP upper bound >= 0.90),\nas distributions over repetitions (median, 5th-95th percentile) and success rates.\nLabel: DEVELOPMENT_DRY_RUN_NOT_A_RESULT. These numbers must not be presented as validation.\n",
+  "table_folder": "data/interim/oof_tables_20261112T082351Z",
+  "reps": 200,
+  "sizes": {
+    "calibration": 35,
+    "test": 53,
+    "fit": 77
+  },
+  "distributions": {
+    "U0|volume_mm3|coverage": {
+      "median": 0.9209579704657327,
+      "p05": 0.8511926560102935,
+      "p95": 0.9600263157894736,
+      "n": 200
+    },
+    "U0|volume_mm3|median_rel_width": {
+      "median": 1.9146396489542918,
+      "p05": 1.3362787918595729,
+      "p95": 2.5009293774756522,
+      "n": 200
+    },
+    "U0|volume_mm3|stones": {
+      "median": 150.0,
+      "p05": 114.95,
+      "p95": 176.19999999999993,
+      "n": 200
+    },
+    "U0|volume_mm3|cov_<5": {
+      "median": 0.7777777777777778,
+      "p05": 0.6152276295133439,
+      "p95": 0.8897569444444441,
+      "n": 200
+    },
+    "U0|volume_mm3|cov_5-<10": {
+      "median": 0.9506097560975609,
+      "p05": 0.8694831829368335,
+      "p95": 1.0,
+      "n": 200
+    },
+    "U0|volume_mm3|cov_>=10": {
+      "median": 0.9850746268656716,
+      "p05": 0.9610133287764867,
+      "p95": 1.0,
+      "n": 200
+    },
+    "U1|volume_mm3|coverage": {
+      "median": 0.9143589743589744,
+      "p05": 0.8199090909090909,
+      "p95": 0.9668635504507124,
+      "n": 200
+    },
+    "U1|volume_mm3|median_rel_width": {
+      "median": 1.9093486058081686,
+      "p05": 1.3918976545842219,
+      "p95": 2.9905462184873945,
+      "n": 200
+    },
+    "U1|volume_mm3|stones": {
+      "median": 150.0,
+      "p05": 114.95,
+      "p95": 176.19999999999993,
+      "n": 200
+    },
+    "U1|volume_mm3|cov_<5": {
+      "median": 0.75,
+      "p05": 0.5331372549019607,
+      "p95": 0.9070824524312896,
+      "n": 200
+    },
+    "U1|volume_mm3|cov_5-<10": {
+      "median": 0.9578900709219859,
+      "p05": 0.8123005319148936,
+      "p95": 1.0,
+      "n": 200
+    },
+    "U1|volume_mm3|cov_>=10": {
+      "median": 0.9848484848484849,
+      "p05": 0.957111801242236,
+      "p95": 1.0,
+      "n": 200
+    },
+    "U2|volume_mm3|coverage": {
+      "median": 0.9118633940062512,
+      "p05": 0.7909456623134328,
+      "p95": 0.9694200467846581,
+      "n": 200
+    },
+    "U2|volume_mm3|median_rel_width": {
+      "median": 1.6152454780361754,
+      "p05": 0.7354582675724513,
+      "p95": 3.75,
+      "n": 200
+    },
+    "U2|volume_mm3|stones": {
+      "median": 150.0,
+      "p05": 114.95,
+      "p95": 176.19999999999993,
+      "n": 200
+    },
+    "U2|volume_mm3|cov_<5": {
+      "median": 0.926829268292683,
+      "p05": 0.727020202020202,
+      "p95": 1.0,
+      "n": 200
+    },
+    "U2|volume_mm3|cov_5-<10": {
+      "median": 0.935133239831697,
+      "p05": 0.6786163522012578,
+      "p95": 1.0,
+      "n": 200
+    },
+    "U2|volume_mm3|cov_>=10": {
+      "median": 0.9169944925255704,
+      "p05": 0.7968074324324323,
+      "p95": 0.9839311506981223,
+      "n": 200
+    },
+    "U4|max_diameter_3d_mm|coverage": {
+      "median": 0.9067577061561429,
+      "p05": 0.8299266247379454,
+      "p95": 0.974025974025974,
+      "n": 200
+    },
+    "U4|max_diameter_3d_mm|median_rel_width": {
+      "median": 0.45308269286725156,
+      "p05": 0.3318126637097045,
+      "p95": 0.8023680390521291,
+      "n": 200
+    },
+    "U4|max_diameter_3d_mm|stones": {
+      "median": 150.0,
+      "p05": 114.95,
+      "p95": 176.19999999999993,
+      "n": 200
+    },
+    "U4|max_diameter_3d_mm|cov_<5": {
+      "median": 0.8841681574239714,
+      "p05": 0.8041304347826087,
+      "p95": 0.9556038647342996,
+      "n": 200
+    },
+    "U4|max_diameter_3d_mm|cov_5-<10": {
+      "median": 0.9230769230769231,
+      "p05": 0.8048515376458113,
+      "p95": 1.0,
+      "n": 200
+    },
+    "U4|max_diameter_3d_mm|cov_>=10": {
+      "median": 0.9130434782608695,
+      "p05": 0.7899368863955119,
+      "p95": 1.0,
+      "n": 200
+    },
+    "filter_on|ratio_median": {
+      "median": 0.6435028356059743,
+      "p05": 0.08813173817107439,
+      "p95": 1.729176903121828,
+      "n": 200
+    },
+    "filter_on|ratio_ci_hi": {
+      "median": 0.8250714743462453,
+      "p05": 0.12526852901576382,
+      "p95": 2.333338842954415,
+      "n": 200
+    },
+    "filter_on|P2-0 naive|coverage": {
+      "median": 0.7924528301886793,
+      "p05": 0.6981132075471698,
+      "p95": 0.8679245283018868,
+      "n": 200
+    },
+    "filter_on|P2-0 naive|median_width_mm3": {
+      "median": 1269.0010290044765,
+      "p05": 775.6086788733094,
+      "p95": 2324.0725736093764,
+      "n": 200
+    },
+    "filter_on|P2-0 naive|coverage_stone_free": {
+      "median": 0.6363636363636364,
+      "p05": 0.44365079365079363,
+      "p95": 0.8127840909090908,
+      "n": 200
+    },
+    "filter_on|P2-B direct|coverage": {
+      "median": 0.9245283018867925,
+      "p05": 0.8113207547169812,
+      "p95": 0.9811320754716981,
+      "n": 200
+    },
+    "filter_on|P2-B direct|median_width_mm3": {
+      "median": 23840.25327895056,
+      "p05": 4179.289540358635,
+      "p95": 409185.81097926287,
+      "n": 200
+    },
+    "filter_on|P2-B direct|coverage_stone_free": {
+      "median": 0.7,
+      "p05": 0.5,
+      "p95": 0.9230769230769231,
+      "n": 200
+    },
+    "filter_on|P2-B-CQR|coverage": {
+      "median": 0.9245283018867925,
+      "p05": 0.8113207547169812,
+      "p95": 1.0,
+      "n": 200
+    },
+    "filter_on|P2-B-CQR|median_width_mm3": {
+      "median": 5289.018592532579,
+      "p05": 2183.6071080479055,
+      "p95": 40024.257879026496,
+      "n": 200
+    },
+    "filter_on|P2-B-CQR|coverage_stone_free": {
+      "median": 0.8181818181818182,
+      "p05": 0.5547008547008547,
+      "p95": 1.0,
+      "n": 200
+    },
+    "filter_on|P2-A decomposition|coverage": {
+      "median": 0.9245283018867925,
+      "p05": 0.8490566037735849,
+      "p95": 0.9811320754716981,
+      "n": 200
+    },
+    "filter_on|P2-A decomposition|median_width_mm3": {
+      "median": 2209.569738945894,
+      "p05": 1131.552403735859,
+      "p95": 8431.399021867608,
+      "n": 200
+    },
+    "filter_on|P2-A decomposition|coverage_stone_free": {
+      "median": 0.9198717948717949,
+      "p05": 0.75,
+      "p95": 1.0,
+      "n": 200
+    },
+    "filter_off|ratio_median": {
+      "median": 0.5459666114272135,
+      "p05": 0.0937326805095221,
+      "p95": 1.6976991353553046,
+      "n": 200
+    },
+    "filter_off|ratio_ci_hi": {
+      "median": 0.7013367210884682,
+      "p05": 0.12696964019331647,
+      "p95": 2.066197223742968,
+      "n": 200
+    },
+    "filter_off|P2-0 naive|coverage": {
+      "median": 0.7169811320754716,
+      "p05": 0.6226415094339622,
+      "p95": 0.7924528301886793,
+      "n": 200
+    },
+    "filter_off|P2-0 naive|median_width_mm3": {
+      "median": 1536.5381822132263,
+      "p05": 894.0787554115615,
+      "p95": 2908.745497599413,
+      "n": 200
+    },
+    "filter_off|P2-0 naive|coverage_stone_free": {
+      "median": 0.4444444444444444,
+      "p05": 0.25,
+      "p95": 0.625,
+      "n": 200
+    },
+    "filter_off|P2-B direct|coverage": {
+      "median": 0.9245283018867925,
+      "p05": 0.829245283018868,
+      "p95": 0.9811320754716981,
+      "n": 200
+    },
+    "filter_off|P2-B direct|median_width_mm3": {
+      "median": 78521.60661724188,
+      "p05": 13053.507021539855,
+      "p95": 831666.8353881637,
+      "n": 200
+    },
+    "filter_off|P2-B direct|coverage_stone_free": {
+      "median": 0.6666666666666666,
+      "p05": 0.3841346153846154,
+      "p95": 0.9233516483516483,
+      "n": 200
+    },
+    "filter_off|P2-B-CQR|coverage": {
+      "median": 0.9245283018867925,
+      "p05": 0.8113207547169812,
+      "p95": 1.0,
+      "n": 200
+    },
+    "filter_off|P2-B-CQR|median_width_mm3": {
+      "median": 7598.00807365449,
+      "p05": 2198.213801558512,
+      "p95": 33825.79962156459,
+      "n": 200
+    },
+    "filter_off|P2-B-CQR|coverage_stone_free": {
+      "median": 0.80625,
+      "p05": 0.5706349206349206,
+      "p95": 1.0,
+      "n": 200
+    },
+    "filter_off|P2-A decomposition|coverage": {
+      "median": 0.9245283018867925,
+      "p05": 0.8490566037735849,
+      "p95": 0.9811320754716981,
+      "n": 200
+    },
+    "filter_off|P2-A decomposition|median_width_mm3": {
+      "median": 2401.702151232377,
+      "p05": 1208.097009375306,
+      "p95": 12777.972513155506,
+      "n": 200
+    },
+    "filter_off|P2-A decomposition|coverage_stone_free": {
+      "median": 0.9090909090909091,
+      "p05": 0.7491666666666666,
+      "p95": 1.0,
+      "n": 200
+    }
+  },
+  "rates": {
+    "filter_on|P2_success": 0.64,
+    "filter_on|guard_pass": 0.995,
+    "filter_off|P2_success": 0.715,
+    "filter_off|guard_pass": 0.985
+  }
+}

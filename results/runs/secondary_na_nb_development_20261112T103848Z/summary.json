@@ -1,0 +1,700 @@
+{
+  "status": "DEVELOPMENT_SECONDARY_NOT_VALIDATED",
+  "definitions": "Secondary analyses N-A and N-B on DEVELOPMENT out-of-fold data (owner decision OD-13). Neither is a novelty\nclaim; both apply established conformal mechanisms (docs/NOVELTY_GATE_20261112.md). Rules were fixed in\ndocs/NOVELTY_CANDIDATES_20261112.md BEFORE this script was first run.\n\nProtocol: the same cross-conformal-by-fold design and table as E6 (one_to_one matched stones; for fold k,\ncalibrate on the other folds and evaluate on fold k). The comparator is U2 (Mondrian by predicted size; the\npre-specified final per-stone method, OD-12).\n\nN-A, robustness (Mondrian by predicted-size band x HU tertile):\n- HU tertile cuts from the calibration folds' predicted mean HU; within each HU tertile, U2's size bands with the\n  same merge rule (minimum 20 calibration stones).\n- Evaluation cells: predicted-size band (3) x HU tertile (cuts over all matched stones, as in E6) = 9 cells.\n- Pre-specified rule: worst-cell point coverage improves by >= 0.03 over U2, marginal point coverage >= 0.85,\n  and median relative width increases by <= 15%. Otherwise reported as negative.\n\nN-B, secondary (patient-level joint coverage, max-score):\n- The calibration folds are split by patient into halves A and B (seeded). Half A fits the U2 size-band\n  quantiles q_s. Half B gives one score per patient, max over its matched stones of |log(V/V_hat)| / q_s(i), and\n  tau = conformal quantile of those scores. Test interval for each stone: +/- tau * q_s(i).\n- Endpoint: share of test patients with ALL matched stones covered; width inflation = median relative width\n  N-B / U2.\n- Pre-specified rule: joint point coverage >= 0.85 and Clopper-Pearson upper bound >= nominal, with\n  inflation <= 2x. Otherwise reported as not met.\nLabel DEVELOPMENT_SECONDARY_NOT_VALIDATED.\n",
+  "stones": 465,
+  "scans": 122,
+  "results": {
+    "volume_mm3|0.90": {
+      "U2": {
+        "marginal": 0.9010752688172043,
+        "median_rel_width": 1.4413879408418655,
+        "worst_cell": {
+          "coverage": 0.7272727272727273,
+          "n": 11
+        },
+        "cells": {
+          "0|0": [
+            0.863,
+            95
+          ],
+          "0|1": [
+            0.923,
+            26
+          ],
+          "0|2": [
+            1.0,
+            3
+          ],
+          "1|0": [
+            0.796,
+            49
+          ],
+          "1|1": [
+            0.963,
+            54
+          ],
+          "1|2": [
+            1.0,
+            28
+          ],
+          "2|0": [
+            0.727,
+            11
+          ],
+          "2|1": [
+            0.893,
+            75
+          ],
+          "2|2": [
+            0.935,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.7950819672131147,
+          "cp95": [
+            0.7125391737317156,
+            0.8627804457768384
+          ]
+        }
+      },
+      "N-A": {
+        "marginal": 0.9053763440860215,
+        "median_rel_width": 1.518629076838032,
+        "worst_cell": {
+          "coverage": 0.3333333333333333,
+          "n": 3
+        },
+        "cells": {
+          "0|0": [
+            0.874,
+            95
+          ],
+          "0|1": [
+            0.846,
+            26
+          ],
+          "0|2": [
+            0.333,
+            3
+          ],
+          "1|0": [
+            0.898,
+            49
+          ],
+          "1|1": [
+            0.963,
+            54
+          ],
+          "1|2": [
+            1.0,
+            28
+          ],
+          "2|0": [
+            0.909,
+            11
+          ],
+          "2|1": [
+            0.893,
+            75
+          ],
+          "2|2": [
+            0.919,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.7786885245901639,
+          "cp95": [
+            0.6945785843420497,
+            0.8488038714289494
+          ]
+        }
+      },
+      "N-B": {
+        "marginal": 0.9763440860215054,
+        "median_rel_width": 2.5377014663362747,
+        "worst_cell": {
+          "coverage": 0.7272727272727273,
+          "n": 11
+        },
+        "cells": {
+          "0|0": [
+            0.989,
+            95
+          ],
+          "0|1": [
+            1.0,
+            26
+          ],
+          "0|2": [
+            1.0,
+            3
+          ],
+          "1|0": [
+            0.959,
+            49
+          ],
+          "1|1": [
+            1.0,
+            54
+          ],
+          "1|2": [
+            1.0,
+            28
+          ],
+          "2|0": [
+            0.727,
+            11
+          ],
+          "2|1": [
+            0.96,
+            75
+          ],
+          "2|2": [
+            0.984,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.9344262295081968,
+          "cp95": [
+            0.8748797580276311,
+            0.9712670659835423
+          ]
+        }
+      },
+      "N-A_rule": {
+        "worst_cell_gain": -0.393939393939394,
+        "width_increase": 0.05358802707274801,
+        "met": false
+      },
+      "N-B_rule": {
+        "width_inflation": 1.7605957386143316,
+        "met": true
+      }
+    },
+    "volume_mm3|0.80": {
+      "U2": {
+        "marginal": 0.8021505376344086,
+        "median_rel_width": 1.0414065751144403,
+        "worst_cell": {
+          "coverage": 0.5454545454545454,
+          "n": 11
+        },
+        "cells": {
+          "0|0": [
+            0.789,
+            95
+          ],
+          "0|1": [
+            0.808,
+            26
+          ],
+          "0|2": [
+            0.667,
+            3
+          ],
+          "1|0": [
+            0.714,
+            49
+          ],
+          "1|1": [
+            0.87,
+            54
+          ],
+          "1|2": [
+            0.857,
+            28
+          ],
+          "2|0": [
+            0.545,
+            11
+          ],
+          "2|1": [
+            0.747,
+            75
+          ],
+          "2|2": [
+            0.863,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.680327868852459,
+          "cp95": [
+            0.5898283137029839,
+            0.7618351100148987
+          ]
+        }
+      },
+      "N-A": {
+        "marginal": 0.8043010752688172,
+        "median_rel_width": 1.158223289315726,
+        "worst_cell": {
+          "coverage": 0.0,
+          "n": 3
+        },
+        "cells": {
+          "0|0": [
+            0.779,
+            95
+          ],
+          "0|1": [
+            0.731,
+            26
+          ],
+          "0|2": [
+            0.0,
+            3
+          ],
+          "1|0": [
+            0.796,
+            49
+          ],
+          "1|1": [
+            0.907,
+            54
+          ],
+          "1|2": [
+            0.821,
+            28
+          ],
+          "2|0": [
+            0.818,
+            11
+          ],
+          "2|1": [
+            0.813,
+            75
+          ],
+          "2|2": [
+            0.806,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.6721311475409836,
+          "cp95": [
+            0.5813012699239498,
+            0.754380679218197
+          ]
+        }
+      },
+      "N-B": {
+        "marginal": 0.9053763440860215,
+        "median_rel_width": 1.412569944044764,
+        "worst_cell": {
+          "coverage": 0.6363636363636364,
+          "n": 11
+        },
+        "cells": {
+          "0|0": [
+            0.905,
+            95
+          ],
+          "0|1": [
+            0.962,
+            26
+          ],
+          "0|2": [
+            1.0,
+            3
+          ],
+          "1|0": [
+            0.796,
+            49
+          ],
+          "1|1": [
+            0.963,
+            54
+          ],
+          "1|2": [
+            1.0,
+            28
+          ],
+          "2|0": [
+            0.636,
+            11
+          ],
+          "2|1": [
+            0.853,
+            75
+          ],
+          "2|2": [
+            0.944,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.7868852459016393,
+          "cp95": [
+            0.7035381814277841,
+            0.8558136689384716
+          ]
+        }
+      },
+      "N-A_rule": {
+        "worst_cell_gain": -0.5454545454545454,
+        "width_increase": 0.11217205363663907,
+        "met": false
+      },
+      "N-B_rule": {
+        "width_inflation": 1.3564058243914356,
+        "met": true
+      }
+    },
+    "max_diameter_3d_mm|0.90": {
+      "U2": {
+        "marginal": 0.9032258064516129,
+        "median_rel_width": 0.4910735093728106,
+        "worst_cell": {
+          "coverage": 0.6363636363636364,
+          "n": 11
+        },
+        "cells": {
+          "0|0": [
+            0.884,
+            95
+          ],
+          "0|1": [
+            0.962,
+            26
+          ],
+          "0|2": [
+            1.0,
+            3
+          ],
+          "1|0": [
+            0.796,
+            49
+          ],
+          "1|1": [
+            0.944,
+            54
+          ],
+          "1|2": [
+            1.0,
+            28
+          ],
+          "2|0": [
+            0.636,
+            11
+          ],
+          "2|1": [
+            0.893,
+            75
+          ],
+          "2|2": [
+            0.935,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.7868852459016393,
+          "cp95": [
+            0.7035381814277841,
+            0.8558136689384716
+          ]
+        }
+      },
+      "N-A": {
+        "marginal": 0.8989247311827957,
+        "median_rel_width": 0.529259557562663,
+        "worst_cell": {
+          "coverage": 0.3333333333333333,
+          "n": 3
+        },
+        "cells": {
+          "0|0": [
+            0.895,
+            95
+          ],
+          "0|1": [
+            0.769,
+            26
+          ],
+          "0|2": [
+            0.333,
+            3
+          ],
+          "1|0": [
+            0.918,
+            49
+          ],
+          "1|1": [
+            0.963,
+            54
+          ],
+          "1|2": [
+            1.0,
+            28
+          ],
+          "2|0": [
+            0.818,
+            11
+          ],
+          "2|1": [
+            0.893,
+            75
+          ],
+          "2|2": [
+            0.895,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.7540983606557377,
+          "cp95": [
+            0.6679329215923324,
+            0.8275329839405149
+          ]
+        }
+      },
+      "N-B": {
+        "marginal": 0.9741935483870968,
+        "median_rel_width": 0.871457763203677,
+        "worst_cell": {
+          "coverage": 0.8181818181818182,
+          "n": 11
+        },
+        "cells": {
+          "0|0": [
+            1.0,
+            95
+          ],
+          "0|1": [
+            1.0,
+            26
+          ],
+          "0|2": [
+            1.0,
+            3
+          ],
+          "1|0": [
+            0.959,
+            49
+          ],
+          "1|1": [
+            1.0,
+            54
+          ],
+          "1|2": [
+            1.0,
+            28
+          ],
+          "2|0": [
+            0.818,
+            11
+          ],
+          "2|1": [
+            0.96,
+            75
+          ],
+          "2|2": [
+            0.96,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.9180327868852459,
+          "cp95": [
+            0.8544236353838712,
+            0.9599929457428041
+          ]
+        }
+      },
+      "N-A_rule": {
+        "worst_cell_gain": -0.30303030303030304,
+        "width_increase": 0.07776035045877938,
+        "met": false
+      },
+      "N-B_rule": {
+        "width_inflation": 1.7745973801695913,
+        "met": true
+      }
+    },
+    "max_diameter_3d_mm|0.80": {
+      "U2": {
+        "marginal": 0.8064516129032258,
+        "median_rel_width": 0.3718473994694045,
+        "worst_cell": {
+          "coverage": 0.45454545454545453,
+          "n": 11
+        },
+        "cells": {
+          "0|0": [
+            0.789,
+            95
+          ],
+          "0|1": [
+            0.885,
+            26
+          ],
+          "0|2": [
+            1.0,
+            3
+          ],
+          "1|0": [
+            0.694,
+            49
+          ],
+          "1|1": [
+            0.852,
+            54
+          ],
+          "1|2": [
+            0.821,
+            28
+          ],
+          "2|0": [
+            0.455,
+            11
+          ],
+          "2|1": [
+            0.773,
+            75
+          ],
+          "2|2": [
+            0.871,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.639344262295082,
+          "cp95": [
+            0.5474675128628518,
+            0.7242838656945376
+          ]
+        }
+      },
+      "N-A": {
+        "marginal": 0.8,
+        "median_rel_width": 0.3819299939360755,
+        "worst_cell": {
+          "coverage": 0.0,
+          "n": 3
+        },
+        "cells": {
+          "0|0": [
+            0.8,
+            95
+          ],
+          "0|1": [
+            0.654,
+            26
+          ],
+          "0|2": [
+            0.0,
+            3
+          ],
+          "1|0": [
+            0.837,
+            49
+          ],
+          "1|1": [
+            0.889,
+            54
+          ],
+          "1|2": [
+            0.857,
+            28
+          ],
+          "2|0": [
+            0.818,
+            11
+          ],
+          "2|1": [
+            0.787,
+            75
+          ],
+          "2|2": [
+            0.79,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.6229508196721312,
+          "cp95": [
+            0.5307092432560433,
+            0.7090745234804255
+          ]
+        }
+      },
+      "N-B": {
+        "marginal": 0.9032258064516129,
+        "median_rel_width": 0.4970810353423686,
+        "worst_cell": {
+          "coverage": 0.5454545454545454,
+          "n": 11
+        },
+        "cells": {
+          "0|0": [
+            0.895,
+            95
+          ],
+          "0|1": [
+            1.0,
+            26
+          ],
+          "0|2": [
+            1.0,
+            3
+          ],
+          "1|0": [
+            0.837,
+            49
+          ],
+          "1|1": [
+            0.944,
+            54
+          ],
+          "1|2": [
+            1.0,
+            28
+          ],
+          "2|0": [
+            0.545,
+            11
+          ],
+          "2|1": [
+            0.867,
+            75
+          ],
+          "2|2": [
+            0.927,
+            124
+          ]
+        },
+        "joint_patient": {
+          "patients": 122,
+          "coverage": 0.7786885245901639,
+          "cp95": [
+            0.6945785843420497,
+            0.8488038714289494
+          ]
+        }
+      },
+      "N-A_rule": {
+        "worst_cell_gain": -0.45454545454545453,
+        "width_increase": 0.0271148715334788,
+        "met": false
+      },
+      "N-B_rule": {
+        "width_inflation": 1.3367877146691416,
+        "met": true
+      }
+    }
+  }
+}

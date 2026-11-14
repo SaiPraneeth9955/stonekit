@@ -1,0 +1,48 @@
+# Machine-readable list of D1-D6. Field meanings: configs/data_registry.yaml.
+# Licences stay "VERIFY" until confirmed. What has been seen so far: docs/data_registry.md.
+# For D5 and D6, the owner edits status by hand once downloaded. Nothing else checks them.
+datasets:
+  - id: D1
+    name: CT-Uroliths-Freiburg (Neubauer et al., PLoS ONE 2023)
+    access_mode: Open, figshare article 21992264
+    role: Part A physical ground truth
+    source_url: https://figshare.com/articles/dataset/ct-uroliths-freiburg/21992264
+    licence: VERIFY
+    status: missing
+  - id: D2
+    name: MSWAL (Wu et al., MICCAI 2025)
+    access_mode: Public release stated by the publication record; download route to VERIFY
+    role: Part A training and in-vivo test
+    # MASTER_PLAN.md gives github.com/tiuxuxsh76075/MSWAL-, which redirects to the URL below.
+    # That repository's README points to huggingface.co/datasets/zhaodongwu/MSWAL for the data.
+    source_url: https://github.com/haochen-MBZUAI/MSWAL-
+    licence: VERIFY
+    status: missing
+  - id: D3
+    name: CT-ORG (Rister et al., Sci Data 2020; TCIA)
+    access_mode: Open (TCIA)
+    role: Optional extra real non-contrast scans for the annotation-noise subset (owner annotates stones)
+    source_url: https://www.cancerimagingarchive.net/collection/ct-org/
+    licence: VERIFY
+    status: missing
+  - id: D4
+    name: Li et al. 2022 (Zenodo 6042410)
+    access_mode: Restricted, access request decided case by case
+    role: Optional external test set from a second hospital
+    source_url: https://zenodo.org/records/6042410
+    licence: VERIFY
+    status: missing
+  - id: D5
+    name: MIMIC-IV (hosp module)
+    access_mode: Credentialed (PhysioNet training + data use agreement), free
+    role: Part B outcomes and covariates
+    source_url: https://physionet.org/content/mimiciv/
+    licence: VERIFY
+    status: missing
+  - id: D6
+    name: MIMIC-IV-Note
+    access_mode: Credentialed, same route as D5
+    role: Part B exposure (stone size, location) and report-based outcomes
+    source_url: https://physionet.org/content/mimic-iv-note/
+    licence: VERIFY
+    status: missing

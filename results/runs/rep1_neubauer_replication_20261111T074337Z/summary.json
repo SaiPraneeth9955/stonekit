@@ -1,0 +1,1076 @@
+{
+  "protocol": "docs/FREIBURG_REPLICATION_PROTOCOL.md",
+  "config": "configs/rep1_neubauer_replication.yaml",
+  "stones": 101,
+  "splits": 1000,
+  "primary": [
+    "P_Z2",
+    6,
+    "3d"
+  ],
+  "rough_median_hu": {
+    "min": 192.0,
+    "max": 1534.0
+  },
+  "configurations": {
+    "P_Z2_surface6_3d": {
+      "verdicts": {
+        "reproduced": 19,
+        "not reproduced": 7,
+        "close": 4
+      },
+      "table1": {
+        "M1": {
+          "P1": {
+            "mean": 194.665,
+            "sd": 8.5542
+          },
+          "vol_icc": {
+            "mean": 0.9874,
+            "sd": 0.0211
+          },
+          "vol_diff": {
+            "mean": -0.0183,
+            "sd": 0.0703
+          },
+          "vol_sd": {
+            "mean": 0.3162,
+            "sd": 0.1237
+          },
+          "diam_icc": {
+            "mean": 0.9967,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.1811,
+            "sd": 0.1288
+          },
+          "diam_sd": {
+            "mean": 0.5496,
+            "sd": 0.0819
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M2": {
+          "P1": {
+            "mean": 194.586,
+            "sd": 8.4864
+          },
+          "vol_icc": {
+            "mean": 0.9874,
+            "sd": 0.0211
+          },
+          "vol_diff": {
+            "mean": -0.019,
+            "sd": 0.0719
+          },
+          "vol_sd": {
+            "mean": 0.3171,
+            "sd": 0.1251
+          },
+          "diam_icc": {
+            "mean": 0.9967,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.1814,
+            "sd": 0.1291
+          },
+          "diam_sd": {
+            "mean": 0.5496,
+            "sd": 0.0818
+          },
+          "P2": {
+            "mean": 0.002,
+            "sd": 0.0125
+          }
+        },
+        "M3": {
+          "P1": {
+            "mean": 0.3684,
+            "sd": 0.0274
+          },
+          "vol_icc": {
+            "mean": 0.9868,
+            "sd": 0.0168
+          },
+          "vol_diff": {
+            "mean": -0.0476,
+            "sd": 0.0834
+          },
+          "vol_sd": {
+            "mean": 0.3408,
+            "sd": 0.1713
+          },
+          "diam_icc": {
+            "mean": 0.9968,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.2395,
+            "sd": 0.1277
+          },
+          "diam_sd": {
+            "mean": 0.5104,
+            "sd": 0.0798
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M4": {
+          "P1": {
+            "mean": 0.3684,
+            "sd": 0.0274
+          },
+          "vol_icc": {
+            "mean": 0.9868,
+            "sd": 0.0168
+          },
+          "vol_diff": {
+            "mean": -0.0476,
+            "sd": 0.0835
+          },
+          "vol_sd": {
+            "mean": 0.3409,
+            "sd": 0.1714
+          },
+          "diam_icc": {
+            "mean": 0.9968,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.2395,
+            "sd": 0.1277
+          },
+          "diam_sd": {
+            "mean": 0.5104,
+            "sd": 0.0798
+          },
+          "P2": {
+            "mean": 0.0001,
+            "sd": 0.0018
+          }
+        }
+      }
+    },
+    "P_Z2_surface6_axial": {
+      "verdicts": {
+        "not reproduced": 16,
+        "reproduced": 12,
+        "close": 2
+      },
+      "table1": {
+        "M1": {
+          "P1": {
+            "mean": 119.189,
+            "sd": 13.4992
+          },
+          "vol_icc": {
+            "mean": 0.9869,
+            "sd": 0.0245
+          },
+          "vol_diff": {
+            "mean": 0.0896,
+            "sd": 0.0695
+          },
+          "vol_sd": {
+            "mean": 0.2907,
+            "sd": 0.1103
+          },
+          "diam_icc": {
+            "mean": 0.947,
+            "sd": 0.022
+          },
+          "diam_diff": {
+            "mean": -1.1777,
+            "sd": 0.4572
+          },
+          "diam_sd": {
+            "mean": 2.0456,
+            "sd": 0.51
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M2": {
+          "P1": {
+            "mean": 106.759,
+            "sd": 2.4846
+          },
+          "vol_icc": {
+            "mean": 0.9874,
+            "sd": 0.0203
+          },
+          "vol_diff": {
+            "mean": -0.0038,
+            "sd": 0.0833
+          },
+          "vol_sd": {
+            "mean": 0.3222,
+            "sd": 0.1289
+          },
+          "diam_icc": {
+            "mean": 0.951,
+            "sd": 0.0192
+          },
+          "diam_diff": {
+            "mean": -1.0322,
+            "sd": 0.4155
+          },
+          "diam_sd": {
+            "mean": 2.0303,
+            "sd": 0.5245
+          },
+          "P2": {
+            "mean": 0.4002,
+            "sd": 0.0734
+          }
+        },
+        "M3": {
+          "P1": {
+            "mean": 0.2287,
+            "sd": 0.0225
+          },
+          "vol_icc": {
+            "mean": 0.9892,
+            "sd": 0.0204
+          },
+          "vol_diff": {
+            "mean": 0.0403,
+            "sd": 0.0652
+          },
+          "vol_sd": {
+            "mean": 0.2684,
+            "sd": 0.1095
+          },
+          "diam_icc": {
+            "mean": 0.9401,
+            "sd": 0.0274
+          },
+          "diam_diff": {
+            "mean": -1.3622,
+            "sd": 0.4067
+          },
+          "diam_sd": {
+            "mean": 2.0842,
+            "sd": 0.5331
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M4": {
+          "P1": {
+            "mean": 0.2003,
+            "sd": 0.0028
+          },
+          "vol_icc": {
+            "mean": 0.9893,
+            "sd": 0.0176
+          },
+          "vol_diff": {
+            "mean": -0.0117,
+            "sd": 0.0729
+          },
+          "vol_sd": {
+            "mean": 0.2891,
+            "sd": 0.1331
+          },
+          "diam_icc": {
+            "mean": 0.9416,
+            "sd": 0.0272
+          },
+          "diam_diff": {
+            "mean": -1.3185,
+            "sd": 0.3956
+          },
+          "diam_sd": {
+            "mean": 2.0765,
+            "sd": 0.5392
+          },
+          "P2": {
+            "mean": 0.2626,
+            "sd": 0.0531
+          }
+        }
+      }
+    },
+    "P_Z2_surface26_3d": {
+      "verdicts": {
+        "reproduced": 19,
+        "not reproduced": 7,
+        "close": 4
+      },
+      "table1": {
+        "M1": {
+          "P1": {
+            "mean": 194.665,
+            "sd": 8.5542
+          },
+          "vol_icc": {
+            "mean": 0.9874,
+            "sd": 0.0211
+          },
+          "vol_diff": {
+            "mean": -0.0183,
+            "sd": 0.0703
+          },
+          "vol_sd": {
+            "mean": 0.3162,
+            "sd": 0.1237
+          },
+          "diam_icc": {
+            "mean": 0.9967,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.1811,
+            "sd": 0.1288
+          },
+          "diam_sd": {
+            "mean": 0.5496,
+            "sd": 0.0819
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M2": {
+          "P1": {
+            "mean": 194.575,
+            "sd": 8.4888
+          },
+          "vol_icc": {
+            "mean": 0.9874,
+            "sd": 0.0211
+          },
+          "vol_diff": {
+            "mean": -0.0191,
+            "sd": 0.0721
+          },
+          "vol_sd": {
+            "mean": 0.3172,
+            "sd": 0.1252
+          },
+          "diam_icc": {
+            "mean": 0.9967,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.1815,
+            "sd": 0.1291
+          },
+          "diam_sd": {
+            "mean": 0.5497,
+            "sd": 0.0818
+          },
+          "P2": {
+            "mean": 0.0014,
+            "sd": 0.0084
+          }
+        },
+        "M3": {
+          "P1": {
+            "mean": 0.3684,
+            "sd": 0.0274
+          },
+          "vol_icc": {
+            "mean": 0.9868,
+            "sd": 0.0168
+          },
+          "vol_diff": {
+            "mean": -0.0476,
+            "sd": 0.0834
+          },
+          "vol_sd": {
+            "mean": 0.3408,
+            "sd": 0.1713
+          },
+          "diam_icc": {
+            "mean": 0.9968,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.2395,
+            "sd": 0.1277
+          },
+          "diam_sd": {
+            "mean": 0.5104,
+            "sd": 0.0798
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M4": {
+          "P1": {
+            "mean": 0.3684,
+            "sd": 0.0274
+          },
+          "vol_icc": {
+            "mean": 0.9868,
+            "sd": 0.0168
+          },
+          "vol_diff": {
+            "mean": -0.0476,
+            "sd": 0.0835
+          },
+          "vol_sd": {
+            "mean": 0.3409,
+            "sd": 0.1714
+          },
+          "diam_icc": {
+            "mean": 0.9968,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.2395,
+            "sd": 0.1277
+          },
+          "diam_sd": {
+            "mean": 0.5104,
+            "sd": 0.0798
+          },
+          "P2": {
+            "mean": 0.0,
+            "sd": 0.0009
+          }
+        }
+      }
+    },
+    "A_Z2_surface6_3d": {
+      "verdicts": {
+        "reproduced": 19,
+        "close": 6,
+        "not reproduced": 5
+      },
+      "table1": {
+        "M1": {
+          "P1": {
+            "mean": 263.256,
+            "sd": 9.1858
+          },
+          "vol_icc": {
+            "mean": 0.988,
+            "sd": 0.0235
+          },
+          "vol_diff": {
+            "mean": 0.0302,
+            "sd": 0.0639
+          },
+          "vol_sd": {
+            "mean": 0.2813,
+            "sd": 0.1151
+          },
+          "diam_icc": {
+            "mean": 0.9953,
+            "sd": 0.0029
+          },
+          "diam_diff": {
+            "mean": 0.211,
+            "sd": 0.1471
+          },
+          "diam_sd": {
+            "mean": 0.6663,
+            "sd": 0.1327
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M2": {
+          "P1": {
+            "mean": 244.72,
+            "sd": 16.191
+          },
+          "vol_icc": {
+            "mean": 0.9881,
+            "sd": 0.023
+          },
+          "vol_diff": {
+            "mean": 0.0181,
+            "sd": 0.0675
+          },
+          "vol_sd": {
+            "mean": 0.2839,
+            "sd": 0.1115
+          },
+          "diam_icc": {
+            "mean": 0.9952,
+            "sd": 0.003
+          },
+          "diam_diff": {
+            "mean": 0.2794,
+            "sd": 0.1637
+          },
+          "diam_sd": {
+            "mean": 0.6476,
+            "sd": 0.1346
+          },
+          "P2": {
+            "mean": 0.1128,
+            "sd": 0.084
+          }
+        },
+        "M3": {
+          "P1": {
+            "mean": 0.5846,
+            "sd": 0.0151
+          },
+          "vol_icc": {
+            "mean": 0.9903,
+            "sd": 0.0158
+          },
+          "vol_diff": {
+            "mean": -0.0431,
+            "sd": 0.0588
+          },
+          "vol_sd": {
+            "mean": 0.2668,
+            "sd": 0.117
+          },
+          "diam_icc": {
+            "mean": 0.9973,
+            "sd": 0.002
+          },
+          "diam_diff": {
+            "mean": 0.1268,
+            "sd": 0.1083
+          },
+          "diam_sd": {
+            "mean": 0.504,
+            "sd": 0.1051
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M4": {
+          "P1": {
+            "mean": 0.5846,
+            "sd": 0.0151
+          },
+          "vol_icc": {
+            "mean": 0.9903,
+            "sd": 0.0158
+          },
+          "vol_diff": {
+            "mean": -0.0431,
+            "sd": 0.0588
+          },
+          "vol_sd": {
+            "mean": 0.2668,
+            "sd": 0.117
+          },
+          "diam_icc": {
+            "mean": 0.9973,
+            "sd": 0.002
+          },
+          "diam_diff": {
+            "mean": 0.1268,
+            "sd": 0.1083
+          },
+          "diam_sd": {
+            "mean": 0.504,
+            "sd": 0.1051
+          },
+          "P2": {
+            "mean": 0.0,
+            "sd": 0.0
+          }
+        }
+      }
+    },
+    "B_Z2_surface6_3d": {
+      "verdicts": {
+        "reproduced": 20,
+        "not reproduced": 7,
+        "close": 3
+      },
+      "table1": {
+        "M1": {
+          "P1": {
+            "mean": 279.714,
+            "sd": 3.1819
+          },
+          "vol_icc": {
+            "mean": 0.9887,
+            "sd": 0.0251
+          },
+          "vol_diff": {
+            "mean": 0.0253,
+            "sd": 0.0507
+          },
+          "vol_sd": {
+            "mean": 0.2446,
+            "sd": 0.0666
+          },
+          "diam_icc": {
+            "mean": 0.9958,
+            "sd": 0.0029
+          },
+          "diam_diff": {
+            "mean": 0.1277,
+            "sd": 0.1313
+          },
+          "diam_sd": {
+            "mean": 0.6445,
+            "sd": 0.1299
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M2": {
+          "P1": {
+            "mean": 251.245,
+            "sd": 17.4378
+          },
+          "vol_icc": {
+            "mean": 0.9879,
+            "sd": 0.0242
+          },
+          "vol_diff": {
+            "mean": -0.0101,
+            "sd": 0.0686
+          },
+          "vol_sd": {
+            "mean": 0.252,
+            "sd": 0.0784
+          },
+          "diam_icc": {
+            "mean": 0.9957,
+            "sd": 0.0028
+          },
+          "diam_diff": {
+            "mean": 0.2395,
+            "sd": 0.1634
+          },
+          "diam_sd": {
+            "mean": 0.6118,
+            "sd": 0.1271
+          },
+          "P2": {
+            "mean": 0.2331,
+            "sd": 0.1319
+          }
+        },
+        "M3": {
+          "P1": {
+            "mean": 0.5896,
+            "sd": 0.0168
+          },
+          "vol_icc": {
+            "mean": 0.99,
+            "sd": 0.0167
+          },
+          "vol_diff": {
+            "mean": -0.0331,
+            "sd": 0.0606
+          },
+          "vol_sd": {
+            "mean": 0.2614,
+            "sd": 0.1169
+          },
+          "diam_icc": {
+            "mean": 0.9977,
+            "sd": 0.0015
+          },
+          "diam_diff": {
+            "mean": 0.104,
+            "sd": 0.0998
+          },
+          "diam_sd": {
+            "mean": 0.469,
+            "sd": 0.0807
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M4": {
+          "P1": {
+            "mean": 0.5894,
+            "sd": 0.017
+          },
+          "vol_icc": {
+            "mean": 0.99,
+            "sd": 0.0167
+          },
+          "vol_diff": {
+            "mean": -0.0331,
+            "sd": 0.0608
+          },
+          "vol_sd": {
+            "mean": 0.2614,
+            "sd": 0.1169
+          },
+          "diam_icc": {
+            "mean": 0.9977,
+            "sd": 0.0015
+          },
+          "diam_diff": {
+            "mean": 0.1044,
+            "sd": 0.1
+          },
+          "diam_sd": {
+            "mean": 0.4691,
+            "sd": 0.0807
+          },
+          "P2": {
+            "mean": 0.0004,
+            "sd": 0.0038
+          }
+        }
+      }
+    },
+    "P_Z1_surface6_3d": {
+      "verdicts": {
+        "reproduced": 19,
+        "not reproduced": 7,
+        "close": 4
+      },
+      "table1": {
+        "M1": {
+          "P1": {
+            "mean": 194.665,
+            "sd": 8.5542
+          },
+          "vol_icc": {
+            "mean": 0.9874,
+            "sd": 0.0211
+          },
+          "vol_diff": {
+            "mean": -0.0183,
+            "sd": 0.0703
+          },
+          "vol_sd": {
+            "mean": 0.3162,
+            "sd": 0.1237
+          },
+          "diam_icc": {
+            "mean": 0.9967,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.1811,
+            "sd": 0.1288
+          },
+          "diam_sd": {
+            "mean": 0.5496,
+            "sd": 0.0819
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M2": {
+          "P1": {
+            "mean": 194.586,
+            "sd": 8.4864
+          },
+          "vol_icc": {
+            "mean": 0.9874,
+            "sd": 0.0211
+          },
+          "vol_diff": {
+            "mean": -0.019,
+            "sd": 0.0719
+          },
+          "vol_sd": {
+            "mean": 0.3171,
+            "sd": 0.1251
+          },
+          "diam_icc": {
+            "mean": 0.9967,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.1814,
+            "sd": 0.1291
+          },
+          "diam_sd": {
+            "mean": 0.5496,
+            "sd": 0.0818
+          },
+          "P2": {
+            "mean": 0.002,
+            "sd": 0.0125
+          }
+        },
+        "M3": {
+          "P1": {
+            "mean": 0.3684,
+            "sd": 0.0274
+          },
+          "vol_icc": {
+            "mean": 0.9868,
+            "sd": 0.0168
+          },
+          "vol_diff": {
+            "mean": -0.0476,
+            "sd": 0.0834
+          },
+          "vol_sd": {
+            "mean": 0.3408,
+            "sd": 0.1713
+          },
+          "diam_icc": {
+            "mean": 0.9968,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.2395,
+            "sd": 0.1277
+          },
+          "diam_sd": {
+            "mean": 0.5104,
+            "sd": 0.0798
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M4": {
+          "P1": {
+            "mean": 0.3684,
+            "sd": 0.0274
+          },
+          "vol_icc": {
+            "mean": 0.9868,
+            "sd": 0.0168
+          },
+          "vol_diff": {
+            "mean": -0.0476,
+            "sd": 0.0835
+          },
+          "vol_sd": {
+            "mean": 0.3409,
+            "sd": 0.1714
+          },
+          "diam_icc": {
+            "mean": 0.9968,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.2395,
+            "sd": 0.1277
+          },
+          "diam_sd": {
+            "mean": 0.5104,
+            "sd": 0.0798
+          },
+          "P2": {
+            "mean": 0.0001,
+            "sd": 0.0018
+          }
+        }
+      }
+    },
+    "P_Z0_surface6_3d": {
+      "verdicts": {
+        "reproduced": 19,
+        "not reproduced": 7,
+        "close": 4
+      },
+      "table1": {
+        "M1": {
+          "P1": {
+            "mean": 194.665,
+            "sd": 8.5542
+          },
+          "vol_icc": {
+            "mean": 0.9874,
+            "sd": 0.0211
+          },
+          "vol_diff": {
+            "mean": -0.0183,
+            "sd": 0.0703
+          },
+          "vol_sd": {
+            "mean": 0.3162,
+            "sd": 0.1237
+          },
+          "diam_icc": {
+            "mean": 0.9967,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.1811,
+            "sd": 0.1288
+          },
+          "diam_sd": {
+            "mean": 0.5496,
+            "sd": 0.0819
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M2": {
+          "P1": {
+            "mean": 194.586,
+            "sd": 8.4864
+          },
+          "vol_icc": {
+            "mean": 0.9874,
+            "sd": 0.0211
+          },
+          "vol_diff": {
+            "mean": -0.019,
+            "sd": 0.0719
+          },
+          "vol_sd": {
+            "mean": 0.3171,
+            "sd": 0.1251
+          },
+          "diam_icc": {
+            "mean": 0.9967,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.1814,
+            "sd": 0.1291
+          },
+          "diam_sd": {
+            "mean": 0.5496,
+            "sd": 0.0818
+          },
+          "P2": {
+            "mean": 0.002,
+            "sd": 0.0125
+          }
+        },
+        "M3": {
+          "P1": {
+            "mean": 0.3684,
+            "sd": 0.0274
+          },
+          "vol_icc": {
+            "mean": 0.9868,
+            "sd": 0.0168
+          },
+          "vol_diff": {
+            "mean": -0.0476,
+            "sd": 0.0834
+          },
+          "vol_sd": {
+            "mean": 0.3408,
+            "sd": 0.1713
+          },
+          "diam_icc": {
+            "mean": 0.9968,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.2395,
+            "sd": 0.1277
+          },
+          "diam_sd": {
+            "mean": 0.5104,
+            "sd": 0.0798
+          },
+          "P2": {
+            "mean": NaN,
+            "sd": NaN
+          }
+        },
+        "M4": {
+          "P1": {
+            "mean": 0.3684,
+            "sd": 0.0274
+          },
+          "vol_icc": {
+            "mean": 0.9868,
+            "sd": 0.0168
+          },
+          "vol_diff": {
+            "mean": -0.0476,
+            "sd": 0.0835
+          },
+          "vol_sd": {
+            "mean": 0.3409,
+            "sd": 0.1714
+          },
+          "diam_icc": {
+            "mean": 0.9968,
+            "sd": 0.0021
+          },
+          "diam_diff": {
+            "mean": 0.2395,
+            "sd": 0.1277
+          },
+          "diam_sd": {
+            "mean": 0.5104,
+            "sd": 0.0798
+          },
+          "P2": {
+            "mean": 0.0001,
+            "sd": 0.0018
+          }
+        }
+      }
+    }
+  },
+  "primary_all_stone": {
+    "M1": {
+      "vol_icc_all": 0.9929559363389533,
+      "diam_icc_all": 0.9975434901999884,
+      "vol_bias_ml": -0.014445085808581098,
+      "diam_bias_mm": 0.18083964933622207,
+      "vol_median_abs_relative_error_pct": 25.04100601421539
+    },
+    "M2": {
+      "vol_icc_all": 0.9929559363389533,
+      "diam_icc_all": 0.9975434901999884,
+      "vol_bias_ml": -0.014445085808581098,
+      "diam_bias_mm": 0.18083964933622207,
+      "vol_median_abs_relative_error_pct": 25.04100601421539
+    },
+    "M3": {
+      "vol_icc_all": 0.9908920685098189,
+      "diam_icc_all": 0.9975935442712981,
+      "vol_bias_ml": -0.04485322442244249,
+      "diam_bias_mm": 0.23147806570786064,
+      "vol_median_abs_relative_error_pct": 23.35841338095585
+    },
+    "M4": {
+      "vol_icc_all": 0.9908920685098189,
+      "diam_icc_all": 0.9975935442712981,
+      "vol_bias_ml": -0.04485322442244249,
+      "diam_bias_mm": 0.23147806570786064,
+      "vol_median_abs_relative_error_pct": 23.35841338095585
+    },
+    "bartlett_volume_p": 0.5399958851457625,
+    "paired_sd_range_volume_interval_95": [
+      0.0021501634820222507,
+      0.08155379444901642
+    ],
+    "bartlett_diameter_p": 0.8823020565621364,
+    "paired_sd_range_diameter_interval_95": [
+      0.0015727262139460351,
+      0.09639047672558657
+    ],
+    "paper_bartlett_p": {
+      "volume": 0.55,
+      "diameter": 0.87
+    }
+  }
+}
