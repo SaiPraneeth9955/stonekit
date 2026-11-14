@@ -84,6 +84,13 @@ with $c=5$\,mm$^3$, and report
 \end{equation}
 Only $t$ is calibrated; $\pi$, the residual pools and the missed-burden pool come from development data. Comparators: the naive sum of per-piece Mondrian bounds (P2-0); a direct split-conformal interval on $|\log((B+c)/(\hat B+c))|$ (P2-B); and conformalised quantile regression \cite{romano2019} of $\log(B+c)$ on $\log(\hat B+c)$, the false-positive-adjusted volume and slice thickness, fitted on all development scans and conformalised on the calibration scans (P2-B-CQR), the strongest comparator in development.
 
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.94\columnwidth]{figures/fig2_phantom.pdf}
+\caption{Physical reference (Freiburg, 101 stones). (a) Median absolute per-stone volume error by recorded composition (number of stones; bootstrap 95\% CIs; dashed line, all stones, 23.6\%) at a volume ICC of 0.993. (b) Automated diameter minus caliper diameter for the 3D maximum (filled) and the 2D axial maximum (open); horizontal lines show the bias.}
+\label{fig:phantom}
+\end{figure}
+
 \subsection{Protocol and statistics}
 The protocol, code, configuration, model checkpoint and split were hashed and committed before the calibration and test scans were unlocked; calibration quantities were hashed before the test scans were loaded, and the evaluation was run once. The single formal test (nominal 0.90, filter on) required the paired median width ratio of the burden interval to P2-B-CQR (the median over scans of each scan's width ratio) to have a scan-level paired percentile-bootstrap 95\% CI below 1 (10{,}000 resamples, fixed seed), together with a Clopper--Pearson upper bound for its coverage of at least 0.90; it is not a non-inferiority test. Its operating characteristics were estimated before unlocking with a development-only simulation of the locked design (200 seeded development splits of 77 fitting, 35 pseudo-calibration and 53 pseudo-test scans): both criteria were met in 64\% of repetitions and the coverage criterion alone in 99.5\%; without the filter both were met in 71.5\%. A negative locked result was plausible. Because a pre-specified power simulation gave under 80\% power for per-stone coverage on 53 scans, per-stone results are descriptive. Sensitivity cohorts removed scans flagged by a non-radiologist screening review (S1: exclusions; S2: all flags) from all sets, or locked scans in cross-split suspected repeat pairs (S3) from calibration and test. Scan-level coverage CIs are Clopper--Pearson; per-stone CIs in the text resample scans (10{,}000 resamples), whereas the Clopper--Pearson bars of Fig.~\ref{fig:bands} assume independent stones; paired differences and ratios also resample scans. Only one formal test was performed; every other comparison is descriptive, so no multiplicity adjustment is applied. Some pre-specified descriptive endpoints (per-stone coverage by annotated size, attenuation and slice group; scans with all stones covered by U2; calibration of $\pi$; agreement and Dice by size; two further comparators) were not produced by the single run and are not reported.
 
@@ -107,13 +114,6 @@ P2-B-CQR, conformalised quantile regr. & 49/53 (0.925) & 0.818--0.979 & 9/11 & 7
 \section{Results}
 \subsection{Agreement statistics hide stone-level error}\label{sec:res_phantom}
 On the Freiburg phantom, the fixed-threshold method of \cite{neubauer2023} reached a volume ICC(A,1) of 0.993, yet the median absolute per-stone volume error was 23.6\% (95\% CI 17.1--38.4\%), 39.4\% for 10--20\,mm stones, and ranged by composition from 9.9\% (uric acid, $n=8$) to 63.4\% (brushite, $n=17$; Fig.~\ref{fig:phantom}a). Against caliper truth, with diameters defined as in \cite{neubauer2023} (maximum voxel-centre distance plus 0.7\,mm), the automated 3D maximum diameter had a bias of $+0.19$\,mm (limits $-0.87$ to $+1.25$\,mm), whereas the 2D axial maximum had $-1.72$\,mm ($-5.67$ to $+2.22$\,mm); seven stones were categorised correctly at 10\,mm only by 3D and none only by 2D (exact McNemar $p=0.016$, descriptive; Fig.~\ref{fig:phantom}b). In development-set annotations, 11.3\% of stones changed size category between 2D and 3D.
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.94\columnwidth]{figures/fig2_phantom.pdf}
-\caption{Physical reference (Freiburg, 101 stones). (a) Median absolute per-stone volume error by recorded composition (number of stones; bootstrap 95\% CIs; dashed line, all stones, 23.6\%) at a volume ICC of 0.993. (b) Automated diameter minus caliper diameter for the 3D maximum (filled) and the 2D axial maximum (open); horizontal lines show the bias.}
-\label{fig:phantom}
-\end{figure}
 
 \subsection{Confirmatory burden result}
 The formal test succeeded (Table~\ref{tab:t1}). The detection-aware interval covered 50 of 53 scans (0.943; Clopper--Pearson 0.843--0.988) with a median width of 3{,}090\,mm$^3$, against 7{,}431\,mm$^3$ for P2-B-CQR; the paired median width ratio was 0.573 (0.540--0.656). Its coverage did not differ detectably from P2-B-CQR (paired difference $+0.019$; 95\% CI $-0.057$ to $+0.094$): a narrower interval at similar coverage, not higher coverage. It also covered 10 of 11 stone-free scans. A post-hoc replay of the stored test outputs (reproducing every stored aggregate) placed the advantage in stone-bearing scans (ratio 0.554, 0.535--0.609; narrower in 36 of 42); on stone-free scans the detection-aware interval, which always adds a missed-burden draw, was wider (median 710 vs.\ 32\,mm$^3$).
