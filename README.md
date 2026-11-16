@@ -212,7 +212,9 @@ Machine-readable citation metadata is in [`CITATION.cff`](CITATION.cff). Please 
 - **Sai Praneeth Surepalli**: praneethh777@gmail.com
 - **Jaswanth Kolisetty**: kolisettyjaswanth8@gmail.com
 
-All three are with the Department of Computer Science and Engineering, SRM University-AP, Andhra Pradesh, India. We thank Dr. Suresh Kumar Kanaparthi for his guidance. This research received no external funding.
+**Supervisor:** Dr. Suresh Kumar Kanaparthi, sureshkumar.k@srmap.edu.in
+
+All are with the Department of Computer Science and Engineering, SRM University-AP, Andhra Pradesh, India. We thank our supervisor for guidance and support. This research received no external funding.
 
 **AI assistance.** Code development, analysis scripting and manuscript drafting were assisted by an AI coding assistant (Claude Code, Anthropic) working under the authors' direction. The authors take responsibility for the study design and all decisions.
 

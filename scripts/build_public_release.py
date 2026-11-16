@@ -3,7 +3,7 @@
 The public repository is built fresh from this tree (no private git history). Nothing is pushed here.
 Output: public_release/ (git-ignored) plus public_release/RELEASE_MANIFEST.txt (SHA-256 of every file).
 The scan refuses the release (exit code 1) on: image/volume/weight/archive formats, files over 5 MB,
-local machine paths, credential-like strings, or e-mail addresses other than the three authors'.
+local machine paths, credential-like strings, or e-mail addresses other than the three authors' and the supervisor's.
 """
 
 import fnmatch
@@ -56,7 +56,8 @@ DENY = [
 BAD_EXT = (".nii", ".nii.gz", ".pth", ".pt", ".ckpt", ".npz", ".npy", ".nrrd", ".mha", ".dcm", ".zip", ".tar", ".gz", ".pkl", ".h5", ".parquet")
 BAD_TEXT = [r"/home/[a-z]", r"[A-Za-z]:\\\\Users\\\\", r"[A-Za-z]:/Users/", r"wsl\.localhost", r"BEGIN [A-Z ]*PRIVATE KEY", r"\bghp_[A-Za-z0-9]{20,}",
             r"\bhf_[A-Za-z0-9]{20,}", r"AKIA[0-9A-Z]{16}", r"(?i)(api[_-]?key|access[_-]?token|password)\s*[:=]\s*\S{6,}"]  # fmt: skip
-ALLOWED_EMAILS = {"abhijithreddy2006@gmail.com", "praneethh777@gmail.com", "kolisettyjaswanth8@gmail.com"}
+ALLOWED_EMAILS = {"abhijithreddy2006@gmail.com", "praneethh777@gmail.com", "kolisettyjaswanth8@gmail.com",
+                  "sureshkumar.k@srmap.edu.in"}  # supervisor, owner-directed 16 Nov 2026
 EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 
 
