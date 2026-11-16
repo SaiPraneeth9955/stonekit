@@ -174,11 +174,11 @@ The confirmatory evaluation was run once on locked scans, and its outputs are st
 
    | Paper element | Source |
    |---|---|
-   | Table I, Fig. 3, locked-test text | `results/runs/T1_20261113T081425Z/analysis/evaluation.json` |
+   | Table II, Fig. 3, locked-test text | `results/runs/T1_20261113T081425Z/analysis/evaluation.json` |
    | Stone-bearing width ratio (post hoc) | `results/runs/t1_posthoc_width_replay_20261114T081724Z/posthoc_width_replay.json` |
-   | Table III, external rows of Fig. 3 | `results/runs/mswal_external_check_20261113T132418Z/external_check.json` |
+   | Table IV, external rows of Fig. 3 | `results/runs/mswal_external_check_20261113T132418Z/external_check.json` |
    | Pre-unlock simulation (Methods) | `results/runs/t1_dry_run_development_20261112T100623Z/summary.json` |
-   | Table II, development rows | `results/runs/e8_burden_uncertainty_20261112T085235Z/`, `ablation_nc_development_20261112T104213Z/`, `failure_analysis_development_20261112T110426Z/` |
+   | Table III, development rows | `results/runs/e8_burden_uncertainty_20261112T085235Z/`, `ablation_nc_development_20261112T104213Z/`, `failure_analysis_development_20261112T110426Z/` |
    | Fig. 2, phantom text | `results/runs/freiburg_r2_r3_20261111T074847Z/`, `rep1_neubauer_replication_20261111T074337Z/` |
    | Fig. 5 | `paper/figures/fig5_case_data.csv` (from `scripts/make_case_figure.py`) |
 
