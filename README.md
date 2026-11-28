@@ -33,7 +33,7 @@ The method was frozen before evaluation and tested once on locked data. A local 
 
 > S. K. Kanaparthi, A. R. Kadari, S. P. Surepalli and J. Kolisetty, "Detection-Aware Conformal Uncertainty for Automated Kidney-Stone Measurement on Non-Contrast CT," faculty-revised manuscript, 2026.
 
-The faculty-revised six-page manuscript is the preferred citation. Its public PDF release is pending. The historical repository manuscript remains at [paper/main.tex](paper/main.tex), with Figs. 1–4 and Tables I–III; its plotted figure data are in [paper/figures/](paper/figures/).
+The [faculty-revised six-page manuscript PDF](paper/versions/faculty-revised/StoneKit_faculty_revision.pdf) is the preferred citation. The historical repository manuscript remains at [paper/main.tex](paper/main.tex), with Figs. 1–4 and Tables I–III; its plotted figure data are in [paper/figures/](paper/figures/).
 
 **Contributions**
 1. **Detection-aware burden interval.** It propagates false-detection probabilities, size-stratified measurement residuals and missed burden, followed by one conformal calibration.
