@@ -28,6 +28,9 @@ preferred-citation:
   type: unpublished
   title: "Detection-Aware Conformal Uncertainty for Automated Kidney-Stone Measurement on Non-Contrast CT"
   authors:
+    - family-names: Kanaparthi
+      given-names: Suresh Kumar
+      email: sureshkumar.k@srmap.edu.in
     - family-names: Kadari
       given-names: Abhijith Reddy
     - family-names: Surepalli
@@ -35,5 +38,5 @@ preferred-citation:
     - family-names: Kolisetty
       given-names: Jaswanth
   year: 2026
-  notes: "Manuscript"
+  notes: "Faculty-revised six-page manuscript. Corresponding author: Suresh Kumar Kanaparthi. Public PDF release pending."
   url: "https://github.com/SaiPraneeth9955/stonekit"
