@@ -31,9 +31,9 @@ The method was frozen before evaluation and tested once on locked data. A local 
 
 ## Paper
 
-> A. R. Kadari, S. P. Surepalli and J. Kolisetty, "Detection-Aware Conformal Uncertainty for Automated Kidney-Stone Measurement on Non-Contrast CT," manuscript, 2026.
+> S. K. Kanaparthi, A. R. Kadari, S. P. Surepalli and J. Kolisetty, "Detection-Aware Conformal Uncertainty for Automated Kidney-Stone Measurement on Non-Contrast CT," faculty-revised manuscript, 2026.
 
-The manuscript source is [`paper/main.tex`](paper/main.tex) (IEEE conference format, 7 pages). Its figures, with the exact plotted values, are in [`paper/figures/`](paper/figures).
+The faculty-revised six-page manuscript is the preferred citation. Its public PDF release is pending. The historical repository manuscript remains at [paper/main.tex](paper/main.tex), with Figs. 1–4 and Tables I–III; its plotted figure data are in [paper/figures/](paper/figures/).
 
 **Contributions**
 1. **Detection-aware burden interval.** It propagates false-detection probabilities, size-stratified measurement residuals and missed burden, followed by one conformal calibration.
@@ -55,7 +55,7 @@ All values are at nominal 90% coverage.
 | **Physical phantom** (101 stones) | ICC 0.993 alongside a 23.6% median per-stone volume error. 3D maximum diameter bias +0.19 mm, against −1.72 mm for the 2D axial maximum |
 
 <p align="center"><img src="paper/figures/fig3_burden_robustness.png" alt="Width ratio and coverage of the burden interval across sensitivity analyses and the external check" width="100%"></p>
-<p align="center"><sub>Paper Fig. 3: width ratio of the detection-aware interval to the CQR comparator (a) and coverage of both (b), for the primary analysis, sensitivity cohorts, filter ablation, nominal-0.80 analyses and the external check.</sub></p>
+<p align="center"><sub>Repository figure (Fig. 3 in the historical manuscript): width ratio of the detection-aware interval to the CQR comparator (a) and coverage of both (b), for the primary analysis, sensitivity cohorts, filter ablation, nominal-0.80 analyses and the external check.</sub></p>
 
 ## How it works
 
@@ -90,7 +90,7 @@ $$\big[\max\{(L+c)e^{-t}-c,\,0\},\ (U+c)e^{t}-c\big],\qquad c = 5\ \text{mm}^3.$
 The primary measurements are the **3D volume** and the **maximum 3D diameter**. The 2D axial diameter is reported only for comparison.
 
 <p align="center"><img src="paper/figures/fig5_case.png" alt="StoneKit output for one external scan: coronal MIP with stones, per-stone ranges, and the burden decomposition" width="100%"></p>
-<p align="center"><sub>Paper Fig. 5: output for one external non-contrast scan (MSWAL, no annotation used). Three pieces with high false-detection probability π pull the detection-aware interval (34–927 mm³) well below the measured burden (331 mm³).</sub></p>
+<p align="center"><sub>Repository demonstration (Fig. 5 asset): output for one external non-contrast scan (MSWAL, no annotation used). Three pieces with high false-detection probability π pull the detection-aware interval (34–927 mm³) well below the measured burden (331 mm³).</sub></p>
 
 ## Research workstation
 
@@ -145,9 +145,9 @@ Both are derived from the access-controlled Li 2022 data, so neither is distribu
 | `scripts/` | Analysis and figure scripts, including `t1_run.py` (the guarded single-run evaluation), `demo_case.py` (one scan end to end), `make_paper_figures.py` and `make_case_figure.py` |
 | `configs/` | Run configurations, including the frozen pipeline configuration `system_pipeline_v1.yaml` |
 | `tests/` | Unit, integration and workstation tests |
-| `paper/` | Manuscript (`main.tex`, `references.bib`), figures with their plotted values (`figures/*_data.csv`), and the reference audit |
+| `paper/` | Historical repository manuscript, its figures and plotted values, and the reference audit |
 | `docs/` | Frozen confirmatory protocol and freeze manifest, results log, data registry, paper audit, workstation documentation, screenshots |
-| `results/runs/` | Aggregate result files behind every number in the paper |
+| `results/runs/` | Stored aggregate outputs from the original study |
 
 ## Datasets and access
 
@@ -170,24 +170,24 @@ No patient CT data are included in this repository.
 
 The confirmatory evaluation was run once on locked scans, and its outputs are stored and hashed. From this repository you can:
 
-1. **Check every number in the paper against the stored aggregates.**
+1. **Check the original study results against the stored aggregates.** The numbering below refers to the historical repository manuscript.
 
    | Paper element | Source |
    |---|---|
-   | Table II, Fig. 3, locked-test text | `results/runs/T1_20261113T081425Z/analysis/evaluation.json` |
+   | Table I, Fig. 3, locked-test text | `results/runs/T1_20261113T081425Z/analysis/evaluation.json` |
    | Stone-bearing width ratio (post hoc) | `results/runs/t1_posthoc_width_replay_20261114T081724Z/posthoc_width_replay.json` |
-   | Table IV, external rows of Fig. 3 | `results/runs/mswal_external_check_20261113T132418Z/external_check.json` |
+   | Table III, external rows of Fig. 3 | `results/runs/mswal_external_check_20261113T132418Z/external_check.json` |
    | Pre-unlock simulation (Methods) | `results/runs/t1_dry_run_development_20261112T100623Z/summary.json` |
-   | Table III, development rows | `results/runs/e8_burden_uncertainty_20261112T085235Z/`, `ablation_nc_development_20261112T104213Z/`, `failure_analysis_development_20261112T110426Z/` |
+   | Table II, development rows | `results/runs/e8_burden_uncertainty_20261112T085235Z/`, `ablation_nc_development_20261112T104213Z/`, `failure_analysis_development_20261112T110426Z/` |
    | Fig. 2, phantom text | `results/runs/freiburg_r2_r3_20261111T074847Z/`, `rep1_neubauer_replication_20261111T074337Z/` |
-   | Fig. 5 | `paper/figures/fig5_case_data.csv` (from `scripts/make_case_figure.py`) |
+   | Repository demonstration (Fig. 5 asset) | `paper/figures/fig5_case_data.csv` (from `scripts/make_case_figure.py`) |
 
    ```bash
    cd results/runs/T1_20261113T081425Z/analysis && sha256sum -c calibration_quantities.sha256
    ```
 
-2. **Redraw Figs. 1–4.** Run `python scripts/make_paper_figures.py`. Every plotted value is in `paper/figures/*_data.csv`.
-3. **Build the manuscript.** Run `cd paper && latexmk -pdf main.tex`.
+2. **Regenerate the repository figure assets for Figs. 1–4.** Run `python scripts/make_paper_figures.py`. Every plotted value is in `paper/figures/*_data.csv`.
+3. **Build the historical repository manuscript.** Run `cd paper && latexmk -pdf main.tex`.
 4. **Re-run the full study,** after obtaining the datasets:
    - run the pipeline and the development analyses in `scripts/`;
    - run `scripts/t1_run.py`. It refuses to run unless the protocol hash, commit, split, configuration and checkpoint all match the freeze.
@@ -195,10 +195,10 @@ The confirmatory evaluation was run once on locked scans, and its outputs are st
 ## Citation
 
 ```bibtex
-@unpublished{kadari2026stonekit,
-  author = {Kadari, Abhijith Reddy and Surepalli, Sai Praneeth and Kolisetty, Jaswanth},
+@unpublished{kanaparthi2026stonekit,
+  author = {Kanaparthi, Suresh Kumar and Kadari, Abhijith Reddy and Surepalli, Sai Praneeth and Kolisetty, Jaswanth},
   title  = {Detection-Aware Conformal Uncertainty for Automated Kidney-Stone Measurement on Non-Contrast CT},
-  note   = {Manuscript},
+  note   = {Faculty-revised six-page manuscript},
   url    = {https://github.com/SaiPraneeth9955/stonekit},
   year   = {2026}
 }
@@ -208,15 +208,18 @@ Machine-readable citation metadata is in [`CITATION.cff`](CITATION.cff). Please 
 
 ## Authors and acknowledgement
 
-- **Abhijith Reddy Kadari**: corresponding author, abhijithreddy2006@gmail.com
-- **Sai Praneeth Surepalli**: praneethh777@gmail.com
-- **Jaswanth Kolisetty**: kolisettyjaswanth8@gmail.com
+**Manuscript authors**
 
-**Supervisor:** Dr. Suresh Kumar Kanaparthi, sureshkumar.k@srmap.edu.in
+1. **Dr. Suresh Kumar Kanaparthi** (corresponding author), sureshkumar.k@srmap.edu.in
+2. **Abhijith Reddy Kadari**, abhijithreddy2006@gmail.com
+3. **Sai Praneeth Surepalli**, praneethh777@gmail.com
+4. **Jaswanth Kolisetty**, kolisettyjaswanth8@gmail.com
 
-All are with the Department of Computer Science and Engineering, SRM University-AP, Andhra Pradesh, India. We thank our supervisor for guidance and support. This research received no external funding.
+All are with the Department of Computer Science and Engineering, SRM University-AP, Amaravati 522 240, Andhra Pradesh, India. This research received no external funding.
 
-**AI assistance.** Code development, analysis scripting and manuscript drafting were assisted by an AI coding assistant (Claude Code, Anthropic) working under the authors' direction. The authors take responsibility for the study design and all decisions.
+**Software authors.** The software citation in [`CITATION.cff`](CITATION.cff) credits Abhijith Reddy Kadari, Sai Praneeth Surepalli and Jaswanth Kolisetty.
+
+**AI assistance.** Claude Code (Anthropic) reviewed the authors' work, suggested revisions, flagged errors and assisted with technical verification. ChatGPT (OpenAI) assisted with faculty-review interpretation, revision planning, assessment of reported statistics and manuscript verification. Codex (OpenAI) assisted with statistical verification, reviewer-requested analyses, LaTeX compilation and revisions to the Abstract, Introduction, Methodology, Results, Limitations and Acknowledgment. The human authors retain responsibility for the research and final manuscript.
 
 ## Licence
 
